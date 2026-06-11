@@ -49,6 +49,15 @@ export type ScorerVM = {
 
 export type BracketRoundVM = { stage: string; matches: MatchVM[] };
 
+export type LiveOverlay = {
+  home: string;
+  away: string;
+  kickoff: string;
+  state: "pre" | "in" | "post";
+  minute: number | null;
+  score: { home: number; away: number } | null;
+};
+
 export type MatchChange =
   | { matchId: number; kind: "score"; score: { home: number; away: number } }
   | { matchId: number; kind: "status"; status: MatchStatus };
@@ -182,6 +191,34 @@ export function toBracket(matches: MatchVM[]): BracketRoundVM[] {
     stage,
     matches: matches.filter((m) => m.stage === stage),
   }));
+}
+
+/**
+ * Overlays real-time state (from ESPN) onto the primary feed's matches.
+ * Matches pair by identical kickoff instant plus at least one team code in
+ * common. Only upgrades: pre-match overlays and already-finished matches in
+ * the primary feed are left untouched.
+ */
+export function mergeLiveOverlay(
+  matches: MatchVM[],
+  overlays: LiveOverlay[],
+): MatchVM[] {
+  if (overlays.length === 0) return matches;
+  return matches.map((match) => {
+    if (match.status === "FINISHED") return match;
+    const overlay = overlays.find(
+      (o) =>
+        Date.parse(o.kickoff) === Date.parse(match.kickoff) &&
+        (o.home === match.home.code || o.away === match.away.code),
+    );
+    if (!overlay || overlay.state === "pre") return match;
+    return {
+      ...match,
+      status: overlay.state === "in" ? "LIVE" : "FINISHED",
+      minute: overlay.state === "in" ? overlay.minute : null,
+      score: overlay.score ?? match.score,
+    };
+  });
 }
 
 export function diffMatches(prev: MatchVM[], next: MatchVM[]): MatchChange[] {

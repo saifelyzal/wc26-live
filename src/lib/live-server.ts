@@ -1,8 +1,9 @@
 import { createFootballApi, type FootballApi } from "./football-api";
+import { fetchLiveOverlays } from "./espn-live";
 import { LiveHub } from "./live-hub";
 import { nextPollDelay } from "./poller";
 import { simulateTick } from "./live-sim";
-import { diffMatches, type MatchVM } from "./transformers";
+import { diffMatches, mergeLiveOverlay, type MatchVM } from "./transformers";
 
 export type MatchesState = {
   matches: MatchVM[];
@@ -88,8 +89,19 @@ export class LiveServer {
       }
       next = { matches, updatedAt: Date.now(), stale: false };
     } else {
-      const result = await this.api.getMatches();
-      next = { matches: result.data, updatedAt: result.updatedAt, stale: result.stale };
+      const [result, overlays] = await Promise.all([
+        this.api.getMatches(),
+        // Real-time overlay is best-effort; the primary feed still renders.
+        fetchLiveOverlays().catch((error) => {
+          console.error("[live-server] ESPN overlay unavailable:", error);
+          return [];
+        }),
+      ]);
+      next = {
+        matches: mergeLiveOverlay(result.data, overlays),
+        updatedAt: Date.now(),
+        stale: result.stale,
+      };
     }
 
     this.current = next;

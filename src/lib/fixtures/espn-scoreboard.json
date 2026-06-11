@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "id": "760415",
+      "date": "2026-06-11T19:00Z",
+      "status": {
+        "displayClock": "45'",
+        "type": {
+          "state": "in",
+          "name": "STATUS_FIRST_HALF"
+        }
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "homeAway": "home",
+              "score": "1",
+              "team": {
+                "abbreviation": "MEX",
+                "displayName": "Mexico"
+              }
+            },
+            {
+              "homeAway": "away",
+              "score": "0",
+              "team": {
+                "abbreviation": "RSA",
+                "displayName": "South Africa"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "760414",
+      "date": "2026-06-12T02:00Z",
+      "status": {
+        "displayClock": "0'",
+        "type": {
+          "state": "pre",
+          "name": "STATUS_SCHEDULED"
+        }
+      },
+      "competitions": [
+        {
+          "competitors": [
+            {
+              "homeAway": "home",
+              "score": "0",
+              "team": {
+                "abbreviation": "KOR",
+                "displayName": "South Korea"
+              }
+            },
+            {
+              "homeAway": "away",
+              "score": "0",
+              "team": {
+                "abbreviation": "CZE",
+                "displayName": "Czechia"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
