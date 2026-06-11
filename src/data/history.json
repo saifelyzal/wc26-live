@@ -1,0 +1,809 @@
+{
+  "tournaments": [
+    {
+      "year": 1930,
+      "hosts": [
+        {
+          "code": "UY",
+          "name": "Uruguay"
+        }
+      ],
+      "winner": {
+        "code": "UY",
+        "name": "Uruguay"
+      },
+      "runnerUp": {
+        "code": "AR",
+        "name": "Argentina"
+      },
+      "finalScore": "4-2",
+      "third": {
+        "code": "US",
+        "name": "United States"
+      },
+      "topScorers": [
+        {
+          "player": "Guillermo Stábile",
+          "team": {
+            "code": "AR",
+            "name": "Argentina"
+          },
+          "goals": 8
+        }
+      ],
+      "teams": 13,
+      "matches": 18,
+      "goals": 70
+    },
+    {
+      "year": 1934,
+      "hosts": [
+        {
+          "code": "IT",
+          "name": "Italy"
+        }
+      ],
+      "winner": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "runnerUp": {
+        "name": "Czechoslovakia"
+      },
+      "finalScore": "2-1 (a.e.t.)",
+      "third": {
+        "code": "DE",
+        "name": "Germany"
+      },
+      "topScorers": [
+        {
+          "player": "Oldřich Nejedlý",
+          "team": {
+            "name": "Czechoslovakia"
+          },
+          "goals": 5
+        }
+      ],
+      "teams": 16,
+      "matches": 17,
+      "goals": 70
+    },
+    {
+      "year": 1938,
+      "hosts": [
+        {
+          "code": "FR",
+          "name": "France"
+        }
+      ],
+      "winner": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "runnerUp": {
+        "code": "HU",
+        "name": "Hungary"
+      },
+      "finalScore": "4-2",
+      "third": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "topScorers": [
+        {
+          "player": "Leônidas",
+          "team": {
+            "code": "BR",
+            "name": "Brazil"
+          },
+          "goals": 7
+        }
+      ],
+      "teams": 15,
+      "matches": 18,
+      "goals": 84
+    },
+    {
+      "year": 1950,
+      "hosts": [
+        {
+          "code": "BR",
+          "name": "Brazil"
+        }
+      ],
+      "winner": {
+        "code": "UY",
+        "name": "Uruguay"
+      },
+      "runnerUp": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "finalScore": "2-1",
+      "third": {
+        "code": "SE",
+        "name": "Sweden"
+      },
+      "topScorers": [
+        {
+          "player": "Ademir",
+          "team": {
+            "code": "BR",
+            "name": "Brazil"
+          },
+          "goals": 8
+        }
+      ],
+      "teams": 13,
+      "matches": 22,
+      "goals": 88,
+      "note": "decidedByFinalGroup"
+    },
+    {
+      "year": 1954,
+      "hosts": [
+        {
+          "code": "CH",
+          "name": "Switzerland"
+        }
+      ],
+      "winner": {
+        "name": "West Germany"
+      },
+      "runnerUp": {
+        "code": "HU",
+        "name": "Hungary"
+      },
+      "finalScore": "3-2",
+      "third": {
+        "code": "AT",
+        "name": "Austria"
+      },
+      "topScorers": [
+        {
+          "player": "Sándor Kocsis",
+          "team": {
+            "code": "HU",
+            "name": "Hungary"
+          },
+          "goals": 11
+        }
+      ],
+      "teams": 16,
+      "matches": 26,
+      "goals": 140
+    },
+    {
+      "year": 1958,
+      "hosts": [
+        {
+          "code": "SE",
+          "name": "Sweden"
+        }
+      ],
+      "winner": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "runnerUp": {
+        "code": "SE",
+        "name": "Sweden"
+      },
+      "finalScore": "5-2",
+      "third": {
+        "code": "FR",
+        "name": "France"
+      },
+      "topScorers": [
+        {
+          "player": "Just Fontaine",
+          "team": {
+            "code": "FR",
+            "name": "France"
+          },
+          "goals": 13
+        }
+      ],
+      "teams": 16,
+      "matches": 35,
+      "goals": 126
+    },
+    {
+      "year": 1962,
+      "hosts": [
+        {
+          "code": "CL",
+          "name": "Chile"
+        }
+      ],
+      "winner": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "runnerUp": {
+        "name": "Czechoslovakia"
+      },
+      "finalScore": "3-1",
+      "third": {
+        "code": "CL",
+        "name": "Chile"
+      },
+      "topScorers": [
+        {
+          "player": "Garrincha",
+          "team": {
+            "code": "BR",
+            "name": "Brazil"
+          },
+          "goals": 4
+        },
+        {
+          "player": "Vavá",
+          "team": {
+            "code": "BR",
+            "name": "Brazil"
+          },
+          "goals": 4
+        },
+        {
+          "player": "Leonel Sánchez",
+          "team": {
+            "code": "CL",
+            "name": "Chile"
+          },
+          "goals": 4
+        },
+        {
+          "player": "Flórián Albert",
+          "team": {
+            "code": "HU",
+            "name": "Hungary"
+          },
+          "goals": 4
+        },
+        {
+          "player": "Valentin Ivanov",
+          "team": {
+            "name": "Soviet Union"
+          },
+          "goals": 4
+        },
+        {
+          "player": "Dražan Jerković",
+          "team": {
+            "name": "Yugoslavia"
+          },
+          "goals": 4
+        }
+      ],
+      "teams": 16,
+      "matches": 32,
+      "goals": 89
+    },
+    {
+      "year": 1966,
+      "hosts": [
+        {
+          "name": "England"
+        }
+      ],
+      "winner": {
+        "name": "England"
+      },
+      "runnerUp": {
+        "name": "West Germany"
+      },
+      "finalScore": "4-2 (a.e.t.)",
+      "third": {
+        "code": "PT",
+        "name": "Portugal"
+      },
+      "topScorers": [
+        {
+          "player": "Eusébio",
+          "team": {
+            "code": "PT",
+            "name": "Portugal"
+          },
+          "goals": 9
+        }
+      ],
+      "teams": 16,
+      "matches": 32,
+      "goals": 89
+    },
+    {
+      "year": 1970,
+      "hosts": [
+        {
+          "code": "MX",
+          "name": "Mexico"
+        }
+      ],
+      "winner": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "runnerUp": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "finalScore": "4-1",
+      "third": {
+        "name": "West Germany"
+      },
+      "topScorers": [
+        {
+          "player": "Gerd Müller",
+          "team": {
+            "name": "West Germany"
+          },
+          "goals": 10
+        }
+      ],
+      "teams": 16,
+      "matches": 32,
+      "goals": 95
+    },
+    {
+      "year": 1974,
+      "hosts": [
+        {
+          "name": "West Germany"
+        }
+      ],
+      "winner": {
+        "name": "West Germany"
+      },
+      "runnerUp": {
+        "code": "NL",
+        "name": "Netherlands"
+      },
+      "finalScore": "2-1",
+      "third": {
+        "code": "PL",
+        "name": "Poland"
+      },
+      "topScorers": [
+        {
+          "player": "Grzegorz Lato",
+          "team": {
+            "code": "PL",
+            "name": "Poland"
+          },
+          "goals": 7
+        }
+      ],
+      "teams": 16,
+      "matches": 38,
+      "goals": 97
+    },
+    {
+      "year": 1978,
+      "hosts": [
+        {
+          "code": "AR",
+          "name": "Argentina"
+        }
+      ],
+      "winner": {
+        "code": "AR",
+        "name": "Argentina"
+      },
+      "runnerUp": {
+        "code": "NL",
+        "name": "Netherlands"
+      },
+      "finalScore": "3-1 (a.e.t.)",
+      "third": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "topScorers": [
+        {
+          "player": "Mario Kempes",
+          "team": {
+            "code": "AR",
+            "name": "Argentina"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 16,
+      "matches": 38,
+      "goals": 102
+    },
+    {
+      "year": 1982,
+      "hosts": [
+        {
+          "code": "ES",
+          "name": "Spain"
+        }
+      ],
+      "winner": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "runnerUp": {
+        "name": "West Germany"
+      },
+      "finalScore": "3-1",
+      "third": {
+        "code": "PL",
+        "name": "Poland"
+      },
+      "topScorers": [
+        {
+          "player": "Paolo Rossi",
+          "team": {
+            "code": "IT",
+            "name": "Italy"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 24,
+      "matches": 52,
+      "goals": 146
+    },
+    {
+      "year": 1986,
+      "hosts": [
+        {
+          "code": "MX",
+          "name": "Mexico"
+        }
+      ],
+      "winner": {
+        "code": "AR",
+        "name": "Argentina"
+      },
+      "runnerUp": {
+        "name": "West Germany"
+      },
+      "finalScore": "3-2",
+      "third": {
+        "code": "FR",
+        "name": "France"
+      },
+      "topScorers": [
+        {
+          "player": "Gary Lineker",
+          "team": {
+            "name": "England"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 24,
+      "matches": 52,
+      "goals": 132
+    },
+    {
+      "year": 1990,
+      "hosts": [
+        {
+          "code": "IT",
+          "name": "Italy"
+        }
+      ],
+      "winner": {
+        "name": "West Germany"
+      },
+      "runnerUp": {
+        "code": "AR",
+        "name": "Argentina"
+      },
+      "finalScore": "1-0",
+      "third": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "topScorers": [
+        {
+          "player": "Salvatore Schillaci",
+          "team": {
+            "code": "IT",
+            "name": "Italy"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 24,
+      "matches": 52,
+      "goals": 115
+    },
+    {
+      "year": 1994,
+      "hosts": [
+        {
+          "code": "US",
+          "name": "United States"
+        }
+      ],
+      "winner": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "runnerUp": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "finalScore": "0-0 (3-2 pens)",
+      "third": {
+        "code": "SE",
+        "name": "Sweden"
+      },
+      "topScorers": [
+        {
+          "player": "Hristo Stoichkov",
+          "team": {
+            "code": "BG",
+            "name": "Bulgaria"
+          },
+          "goals": 6
+        },
+        {
+          "player": "Oleg Salenko",
+          "team": {
+            "code": "RU",
+            "name": "Russia"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 24,
+      "matches": 52,
+      "goals": 141
+    },
+    {
+      "year": 1998,
+      "hosts": [
+        {
+          "code": "FR",
+          "name": "France"
+        }
+      ],
+      "winner": {
+        "code": "FR",
+        "name": "France"
+      },
+      "runnerUp": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "finalScore": "3-0",
+      "third": {
+        "code": "HR",
+        "name": "Croatia"
+      },
+      "topScorers": [
+        {
+          "player": "Davor Šuker",
+          "team": {
+            "code": "HR",
+            "name": "Croatia"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 171
+    },
+    {
+      "year": 2002,
+      "hosts": [
+        {
+          "code": "KR",
+          "name": "South Korea"
+        },
+        {
+          "code": "JP",
+          "name": "Japan"
+        }
+      ],
+      "winner": {
+        "code": "BR",
+        "name": "Brazil"
+      },
+      "runnerUp": {
+        "code": "DE",
+        "name": "Germany"
+      },
+      "finalScore": "2-0",
+      "third": {
+        "code": "TR",
+        "name": "Türkiye"
+      },
+      "topScorers": [
+        {
+          "player": "Ronaldo",
+          "team": {
+            "code": "BR",
+            "name": "Brazil"
+          },
+          "goals": 8
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 161
+    },
+    {
+      "year": 2006,
+      "hosts": [
+        {
+          "code": "DE",
+          "name": "Germany"
+        }
+      ],
+      "winner": {
+        "code": "IT",
+        "name": "Italy"
+      },
+      "runnerUp": {
+        "code": "FR",
+        "name": "France"
+      },
+      "finalScore": "1-1 (5-3 pens)",
+      "third": {
+        "code": "DE",
+        "name": "Germany"
+      },
+      "topScorers": [
+        {
+          "player": "Miroslav Klose",
+          "team": {
+            "code": "DE",
+            "name": "Germany"
+          },
+          "goals": 5
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 147
+    },
+    {
+      "year": 2010,
+      "hosts": [
+        {
+          "code": "ZA",
+          "name": "South Africa"
+        }
+      ],
+      "winner": {
+        "code": "ES",
+        "name": "Spain"
+      },
+      "runnerUp": {
+        "code": "NL",
+        "name": "Netherlands"
+      },
+      "finalScore": "1-0 (a.e.t.)",
+      "third": {
+        "code": "DE",
+        "name": "Germany"
+      },
+      "topScorers": [
+        {
+          "player": "Thomas Müller",
+          "team": {
+            "code": "DE",
+            "name": "Germany"
+          },
+          "goals": 5
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 145
+    },
+    {
+      "year": 2014,
+      "hosts": [
+        {
+          "code": "BR",
+          "name": "Brazil"
+        }
+      ],
+      "winner": {
+        "code": "DE",
+        "name": "Germany"
+      },
+      "runnerUp": {
+        "code": "AR",
+        "name": "Argentina"
+      },
+      "finalScore": "1-0 (a.e.t.)",
+      "third": {
+        "code": "NL",
+        "name": "Netherlands"
+      },
+      "topScorers": [
+        {
+          "player": "James Rodríguez",
+          "team": {
+            "code": "CO",
+            "name": "Colombia"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 171
+    },
+    {
+      "year": 2018,
+      "hosts": [
+        {
+          "code": "RU",
+          "name": "Russia"
+        }
+      ],
+      "winner": {
+        "code": "FR",
+        "name": "France"
+      },
+      "runnerUp": {
+        "code": "HR",
+        "name": "Croatia"
+      },
+      "finalScore": "4-2",
+      "third": {
+        "code": "BE",
+        "name": "Belgium"
+      },
+      "topScorers": [
+        {
+          "player": "Harry Kane",
+          "team": {
+            "name": "England"
+          },
+          "goals": 6
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 169
+    },
+    {
+      "year": 2022,
+      "hosts": [
+        {
+          "code": "QA",
+          "name": "Qatar"
+        }
+      ],
+      "winner": {
+        "code": "AR",
+        "name": "Argentina"
+      },
+      "runnerUp": {
+        "code": "FR",
+        "name": "France"
+      },
+      "finalScore": "3-3 (4-2 pens)",
+      "third": {
+        "code": "HR",
+        "name": "Croatia"
+      },
+      "topScorers": [
+        {
+          "player": "Kylian Mbappé",
+          "team": {
+            "code": "FR",
+            "name": "France"
+          },
+          "goals": 8
+        }
+      ],
+      "teams": 32,
+      "matches": 64,
+      "goals": 172
+    }
+  ]
+}
