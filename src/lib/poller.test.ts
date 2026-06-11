@@ -12,6 +12,26 @@ describe("nextPollDelay", () => {
     expect(nextPollDelay(matches, T)).toBe(30_000);
   });
 
+  test("polls every 30s when kickoff has passed but the feed still says UPCOMING", () => {
+    const overdue = matches
+      .filter((m) => m.status === "UPCOMING" || m.status === "FINISHED")
+      .map((m) => ({
+        ...m,
+        kickoff: new Date(T - 40 * 60_000).toISOString(),
+      }));
+    expect(nextPollDelay(overdue, T)).toBe(30_000);
+  });
+
+  test("does not fast-poll matches overdue by more than 3 hours (postponed)", () => {
+    const longOverdue = matches
+      .filter((m) => m.status === "UPCOMING")
+      .map((m) => ({
+        ...m,
+        kickoff: new Date(T - 4 * 60 * 60_000).toISOString(),
+      }));
+    expect(nextPollDelay(longOverdue, T)).toBe(300_000);
+  });
+
   test("polls every 60s when kickoff is within 10 minutes", () => {
     const idle = matches
       .filter((m) => m.status === "UPCOMING")
