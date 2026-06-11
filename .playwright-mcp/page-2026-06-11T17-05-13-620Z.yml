@@ -1,0 +1,265 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e6] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e7]:
+      - img [ref=e8]
+    - generic [ref=e11]:
+      - button "Open issues overlay" [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "0"
+          - generic [ref=e15]: "1"
+        - generic [ref=e16]: Issue
+      - button "Collapse issues badge" [ref=e17]:
+        - img [ref=e18]
+  - banner [ref=e20]:
+    - generic [ref=e21]:
+      - link "World Cup 26 Live" [ref=e22] [cursor=pointer]:
+        - /url: /en
+        - generic [ref=e23]: ⚽
+        - generic [ref=e24]: World Cup 26 Live
+      - navigation [ref=e25]:
+        - link "Live" [ref=e26] [cursor=pointer]:
+          - /url: /en
+        - link "Matches" [ref=e27] [cursor=pointer]:
+          - /url: /en/matches
+        - link "Groups" [ref=e28] [cursor=pointer]:
+          - /url: /en/groups
+        - link "Bracket" [ref=e29] [cursor=pointer]:
+          - /url: /en/bracket
+        - link "Stats" [ref=e30] [cursor=pointer]:
+          - /url: /en/stats
+        - link "History" [ref=e31] [cursor=pointer]:
+          - /url: /en/history
+      - group "Language" [ref=e32]:
+        - button "EN" [pressed] [ref=e33]
+        - button "ES" [ref=e34]
+        - button "FR" [ref=e35]
+        - button "ع" [ref=e36]
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - heading "Live scoreboard" [level=1] [ref=e40]
+        - generic [ref=e41]:
+          - generic [ref=e42]: Demo mode — simulated match data
+          - paragraph [ref=e43]: Updated 2 seconds ago
+      - generic [ref=e44]:
+        - heading "Live now" [level=2] [ref=e45]: Live now
+        - generic [ref=e47]:
+          - link "Group A LIVE 2053′ Mexico 200 South Africa 199" [ref=e48] [cursor=pointer]:
+            - /url: /en/matches/500002
+            - generic [ref=e49]:
+              - generic [ref=e50]: Group A
+              - generic [ref=e51]:
+                - text: LIVE
+                - generic [ref=e53]: 2053′
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]: 🇲🇽
+                - generic [ref=e57]: Mexico
+                - generic [ref=e59]: "200"
+              - generic [ref=e60]:
+                - generic [ref=e61]: 🇿🇦
+                - generic [ref=e62]: South Africa
+                - generic [ref=e64]: "199"
+          - link "Group C LIVE 2027′ United States 198 Paraguay 198" [ref=e65] [cursor=pointer]:
+            - /url: /en/matches/500003
+            - generic [ref=e66]:
+              - generic [ref=e67]: Group C
+              - generic [ref=e68]:
+                - text: LIVE
+                - generic [ref=e70]: 2027′
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - generic [ref=e73]: United States
+                - generic [ref=e75]: "198"
+              - generic [ref=e76]:
+                - generic [ref=e77]: Paraguay
+                - generic [ref=e79]: "198"
+      - generic [ref=e80]:
+        - heading "Today's matches" [level=2] [ref=e81]
+        - link "Group B FT Canada 1 Italy 2" [ref=e83] [cursor=pointer]:
+          - /url: /en/matches/500001
+          - generic [ref=e84]:
+            - generic [ref=e85]: Group B
+            - generic [ref=e86]: FT
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - generic [ref=e89]: 🇨🇦
+              - generic [ref=e90]: Canada
+              - generic [ref=e92]: "1"
+            - generic [ref=e93]:
+              - generic [ref=e94]: 🇮🇹
+              - generic [ref=e95]: Italy
+              - generic [ref=e97]: "2"
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - heading "Group standings" [level=2] [ref=e101]
+            - link "View all →" [ref=e102] [cursor=pointer]:
+              - /url: /en/groups
+              - text: View all
+              - generic [ref=e103]: →
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - heading "Group A" [level=3] [ref=e107]
+              - table [ref=e108]:
+                - rowgroup [ref=e109]:
+                  - row "P GD Pts" [ref=e110]:
+                    - columnheader [ref=e111]
+                    - columnheader "P" [ref=e112]
+                    - columnheader "GD" [ref=e113]
+                    - columnheader "Pts" [ref=e114]
+                - rowgroup [ref=e115]:
+                  - row "1 Mexico 1 +1 3" [ref=e116]:
+                    - cell "1" [ref=e117]
+                    - cell "Mexico" [ref=e118]:
+                      - generic [ref=e119]:
+                        - generic [ref=e120]: 🇲🇽
+                        - generic [ref=e121]: Mexico
+                    - cell "1" [ref=e122]
+                    - cell "+1" [ref=e123]
+                    - cell "3" [ref=e124]
+                  - row "2 South Korea 0 0 0" [ref=e125]:
+                    - cell "2" [ref=e126]
+                    - cell "South Korea" [ref=e127]:
+                      - generic [ref=e128]:
+                        - generic [ref=e129]: 🇰🇷
+                        - generic [ref=e130]: South Korea
+                    - cell "0" [ref=e131]
+                    - cell "0" [ref=e132]
+                    - cell "0" [ref=e133]
+                  - row "3 Egypt 0 0 0" [ref=e134]:
+                    - cell "3" [ref=e135]
+                    - cell "Egypt" [ref=e136]:
+                      - generic [ref=e137]:
+                        - generic [ref=e138]: 🇪🇬
+                        - generic [ref=e139]: Egypt
+                    - cell "0" [ref=e140]
+                    - cell "0" [ref=e141]
+                    - cell "0" [ref=e142]
+                  - row "4 South Africa 1 -1 0" [ref=e143]:
+                    - cell "4" [ref=e144]
+                    - cell "South Africa" [ref=e145]:
+                      - generic [ref=e146]:
+                        - generic [ref=e147]: 🇿🇦
+                        - generic [ref=e148]: South Africa
+                    - cell "1" [ref=e149]
+                    - cell "-1" [ref=e150]
+                    - cell "0" [ref=e151]
+            - generic [ref=e152]:
+              - heading "Group B" [level=3] [ref=e154]
+              - table [ref=e155]:
+                - rowgroup [ref=e156]:
+                  - row "P GD Pts" [ref=e157]:
+                    - columnheader [ref=e158]
+                    - columnheader "P" [ref=e159]
+                    - columnheader "GD" [ref=e160]
+                    - columnheader "Pts" [ref=e161]
+                - rowgroup [ref=e162]:
+                  - row "1 Italy 1 +1 3" [ref=e163]:
+                    - cell "1" [ref=e164]
+                    - cell "Italy" [ref=e165]:
+                      - generic [ref=e166]:
+                        - generic [ref=e167]: 🇮🇹
+                        - generic [ref=e168]: Italy
+                    - cell "1" [ref=e169]
+                    - cell "+1" [ref=e170]
+                    - cell "3" [ref=e171]
+                  - row "2 France 0 0 0" [ref=e172]:
+                    - cell "2" [ref=e173]
+                    - cell "France" [ref=e174]:
+                      - generic [ref=e175]:
+                        - generic [ref=e176]: 🇫🇷
+                        - generic [ref=e177]: France
+                    - cell "0" [ref=e178]
+                    - cell "0" [ref=e179]
+                    - cell "0" [ref=e180]
+                  - row "3 Saudi Arabia 0 0 0" [ref=e181]:
+                    - cell "3" [ref=e182]
+                    - cell "Saudi Arabia" [ref=e183]:
+                      - generic [ref=e184]:
+                        - generic [ref=e185]: 🇸🇦
+                        - generic [ref=e186]: Saudi Arabia
+                    - cell "0" [ref=e187]
+                    - cell "0" [ref=e188]
+                    - cell "0" [ref=e189]
+                  - row "4 Canada 1 -1 0" [ref=e190]:
+                    - cell "4" [ref=e191]
+                    - cell "Canada" [ref=e192]:
+                      - generic [ref=e193]:
+                        - generic [ref=e194]: 🇨🇦
+                        - generic [ref=e195]: Canada
+                    - cell "1" [ref=e196]
+                    - cell "-1" [ref=e197]
+                    - cell "0" [ref=e198]
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - heading "Top scorers" [level=2] [ref=e201]
+            - link "View all →" [ref=e202] [cursor=pointer]:
+              - /url: /en/stats
+              - text: View all
+              - generic [ref=e203]: →
+          - table [ref=e205]:
+            - rowgroup [ref=e206]:
+              - row "Player Goals Assists Played" [ref=e207]:
+                - columnheader "Player" [ref=e208]
+                - columnheader "Goals" [ref=e209]
+                - columnheader "Assists" [ref=e210]
+                - columnheader "Played" [ref=e211]
+            - rowgroup [ref=e212]:
+              - row "1 Santiago Giménez Mexico 2 0 1" [ref=e213]:
+                - cell "1" [ref=e214]
+                - cell "Santiago Giménez Mexico" [ref=e215]:
+                  - generic [ref=e216]:
+                    - generic [ref=e217]: 🇲🇽
+                    - generic [ref=e218]:
+                      - generic [ref=e219]: Santiago Giménez
+                      - generic [ref=e220]: Mexico
+                - cell "2" [ref=e221]
+                - cell "0" [ref=e222]
+                - cell "1" [ref=e223]
+              - row "2 Mateo Retegui Italy 1 0 1" [ref=e224]:
+                - cell "2" [ref=e225]
+                - cell "Mateo Retegui Italy" [ref=e226]:
+                  - generic [ref=e227]:
+                    - generic [ref=e228]: 🇮🇹
+                    - generic [ref=e229]:
+                      - generic [ref=e230]: Mateo Retegui
+                      - generic [ref=e231]: Italy
+                - cell "1" [ref=e232]
+                - cell "0" [ref=e233]
+                - cell "1" [ref=e234]
+              - row "3 Jonathan David Canada 1 0 1" [ref=e235]:
+                - cell "3" [ref=e236]
+                - cell "Jonathan David Canada" [ref=e237]:
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: 🇨🇦
+                    - generic [ref=e240]:
+                      - generic [ref=e241]: Jonathan David
+                      - generic [ref=e242]: Canada
+                - cell "1" [ref=e243]
+                - cell "0" [ref=e244]
+                - cell "1" [ref=e245]
+              - row "4 Federico Chiesa Italy 1 0 1" [ref=e246]:
+                - cell "4" [ref=e247]
+                - cell "Federico Chiesa Italy" [ref=e248]:
+                  - generic [ref=e249]:
+                    - generic [ref=e250]: 🇮🇹
+                    - generic [ref=e251]:
+                      - generic [ref=e252]: Federico Chiesa
+                      - generic [ref=e253]: Italy
+                - cell "1" [ref=e254]
+                - cell "0" [ref=e255]
+                - cell "1" [ref=e256]
+              - row "5 Lyle Foster South Africa 1 0 1" [ref=e257]:
+                - cell "5" [ref=e258]
+                - cell "Lyle Foster South Africa" [ref=e259]:
+                  - generic [ref=e260]:
+                    - generic [ref=e261]: 🇿🇦
+                    - generic [ref=e262]:
+                      - generic [ref=e263]: Lyle Foster
+                      - generic [ref=e264]: South Africa
+                - cell "1" [ref=e265]
+                - cell "0" [ref=e266]
+                - cell "1" [ref=e267]
+  - contentinfo [ref=e268]: World Cup 26 · football-data.org
+  - alert [ref=e269]

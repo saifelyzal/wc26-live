@@ -1,0 +1,79 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "World Cup 26 Live" [ref=e4] [cursor=pointer]:
+        - /url: /en
+        - generic [ref=e5]: ⚽
+        - generic [ref=e6]: World Cup 26 Live
+      - navigation [ref=e7]:
+        - link "Live" [ref=e8] [cursor=pointer]:
+          - /url: /en
+        - link "Matches" [ref=e9] [cursor=pointer]:
+          - /url: /en/matches
+        - link "Groups" [ref=e10] [cursor=pointer]:
+          - /url: /en/groups
+        - link "Bracket" [ref=e11] [cursor=pointer]:
+          - /url: /en/bracket
+        - link "Stats" [ref=e12] [cursor=pointer]:
+          - /url: /en/stats
+        - link "History" [ref=e13] [cursor=pointer]:
+          - /url: /en/history
+      - group "Language" [ref=e14]:
+        - button "EN" [pressed] [ref=e15]
+        - button "ES" [ref=e16]
+        - button "FR" [ref=e17]
+        - button "ع" [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: Group stage · Group A · Matchday 1
+        - paragraph [ref=e23]: Updated 2 seconds ago
+      - generic [ref=e24]:
+        - generic [ref=e26]:
+          - text: LIVE
+          - generic [ref=e28]: 81′
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: 🇲🇽
+            - generic [ref=e32]: Mexico
+          - generic [ref=e34]: 3–2
+          - generic [ref=e35]:
+            - generic [ref=e36]: 🇿🇦
+            - generic [ref=e37]: South Africa
+      - generic [ref=e38]:
+        - heading "Match timeline" [level=2] [ref=e39]
+        - list [ref=e40]:
+          - listitem [ref=e41]:
+            - generic [ref=e42]: 80′
+            - generic [ref=e43]: ⚽
+            - generic [ref=e44]: Mexico striker
+            - generic [ref=e45]: Goal
+          - listitem [ref=e46]:
+            - generic [ref=e47]: 75′
+            - generic [ref=e48]: ⚽
+            - generic [ref=e49]: South Africa striker
+            - generic [ref=e50]: Goal
+          - listitem [ref=e51]:
+            - generic [ref=e52]: 67′
+            - generic [ref=e53]: ⚽
+            - generic [ref=e54]: Santiago Giménez
+            - generic [ref=e55]: Goal
+          - listitem [ref=e56]:
+            - generic [ref=e57]: 64′
+            - generic [ref=e58]: 🟨
+            - generic [ref=e59]: Teboho Mokoena
+            - generic [ref=e60]: Yellow card
+          - listitem [ref=e61]:
+            - generic [ref=e62]: 52′
+            - generic [ref=e63]: ⚽
+            - generic [ref=e64]: Lyle Foster
+            - generic [ref=e65]: Goal
+          - listitem [ref=e66]:
+            - generic [ref=e67]: 14′
+            - generic [ref=e68]: ⚽
+            - generic [ref=e69]: Santiago Giménez
+            - generic [ref=e70]: Goal
+  - contentinfo [ref=e71]: World Cup 26 · football-data.org
+  - button "Open Next.js Dev Tools" [ref=e77] [cursor=pointer]:
+    - img [ref=e78]
+  - alert [ref=e81]

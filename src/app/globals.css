@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Pitch greens (Mexico / the grass) */
+  --color-pitch-400: #2fbf83;
+  --color-pitch-500: #16a06a;
+  --color-pitch-600: #0d7a52;
+  --color-pitch-700: #096343;
+  --color-pitch-800: #07503a;
+  --color-pitch-900: #053a2b;
+  --color-pitch-950: #02261c;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Ocean blues (USA / Canada skies) */
+  --color-ocean-400: #3b9bd6;
+  --color-ocean-500: #1578b8;
+  --color-ocean-600: #0b5e8a;
+  --color-ocean-700: #0a4d72;
+  --color-ocean-800: #083d5b;
+  --color-ocean-900: #062f47;
+  --color-ocean-950: #041f30;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Festival sun gold */
+  --color-sol-300: #ffd966;
+  --color-sol-400: #ffc933;
+  --color-sol-500: #f5b400;
+
+  /* Live red */
+  --color-rojo-400: #ff6573;
+  --color-rojo-500: #ff3b4e;
+  --color-rojo-600: #e62e40;
+
+  --font-display: var(--font-anton), var(--font-cairo), sans-serif;
+  --font-body: var(--font-cairo), ui-sans-serif, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: #ffffff;
+  background-color: var(--color-pitch-950);
+  background-image:
+    radial-gradient(1100px 520px at 85% -10%, rgba(21, 120, 184, 0.55), transparent 65%),
+    radial-gradient(900px 500px at -10% 15%, rgba(22, 160, 106, 0.5), transparent 60%),
+    radial-gradient(700px 700px at 50% 110%, rgba(245, 180, 0, 0.12), transparent 60%),
+    linear-gradient(165deg, var(--color-pitch-900) 0%, var(--color-pitch-950) 45%, var(--color-ocean-950) 100%);
+  background-attachment: fixed;
+}
+
+/* Subtle confetti grain over the festival gradient */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1.5px),
+    radial-gradient(rgba(255, 201, 51, 0.05) 1px, transparent 1.5px);
+  background-size: 28px 28px, 44px 44px;
+  background-position: 0 0, 14px 22px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* Score digits: keep widths steady as numbers tick */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.8); }
+}
+
+.live-dot {
+  animation: live-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-in {
+  animation: card-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes score-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); color: var(--color-sol-400); }
+  100% { transform: scale(1); }
+}
+
+.score-pop {
+  animation: score-pop 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Decorative ticket-edge perforation for white cards */
+.ticket {
+  position: relative;
+}
+.ticket::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.75rem;
+  bottom: -1px;
+  height: 0;
+  border-bottom: 2px dashed rgba(2, 38, 28, 0.12);
 }

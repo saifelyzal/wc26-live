@@ -3,7 +3,7 @@
   "scorers": [
     {
       "player": { "id": 9201, "name": "Santiago Giménez", "nationality": "Mexico" },
-      "team": { "id": 770, "name": "Mexico", "tla": "MEX", "crest": "https://crests.football-data.org/770.png" },
+      "team": { "id": 770, "name": "Mexico", "tla": "MEX", "crest": "" },
       "playedMatches": 1,
       "goals": 2,
       "assists": 0,
@@ -11,7 +11,7 @@
     },
     {
       "player": { "id": 9001, "name": "Mateo Retegui", "nationality": "Italy" },
-      "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "https://crests.football-data.org/784.png" },
+      "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "" },
       "playedMatches": 1,
       "goals": 1,
       "assists": 0,
@@ -19,7 +19,7 @@
     },
     {
       "player": { "id": 9101, "name": "Jonathan David", "nationality": "Canada" },
-      "team": { "id": 8030, "name": "Canada", "tla": "CAN", "crest": "https://crests.football-data.org/8030.png" },
+      "team": { "id": 8030, "name": "Canada", "tla": "CAN", "crest": "" },
       "playedMatches": 1,
       "goals": 1,
       "assists": 0,
@@ -27,7 +27,7 @@
     },
     {
       "player": { "id": 9003, "name": "Federico Chiesa", "nationality": "Italy" },
-      "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "https://crests.football-data.org/784.png" },
+      "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "" },
       "playedMatches": 1,
       "goals": 1,
       "assists": 0,
@@ -35,7 +35,7 @@
     },
     {
       "player": { "id": 9301, "name": "Lyle Foster", "nationality": "South Africa" },
-      "team": { "id": 1031, "name": "South Africa", "tla": "RSA", "crest": "https://crests.football-data.org/1031.png" },
+      "team": { "id": 1031, "name": "South Africa", "tla": "RSA", "crest": "" },
       "playedMatches": 1,
       "goals": 1,
       "assists": 0,
@@ -43,7 +43,7 @@
     },
     {
       "player": { "id": 9002, "name": "Nicolò Barella", "nationality": "Italy" },
-      "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "https://crests.football-data.org/784.png" },
+      "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "" },
       "playedMatches": 1,
       "goals": 0,
       "assists": 1,

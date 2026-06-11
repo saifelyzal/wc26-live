@@ -8,7 +8,7 @@
       "table": [
         {
           "position": 1,
-          "team": { "id": 770, "name": "Mexico", "tla": "MEX", "crest": "https://crests.football-data.org/770.png" },
+          "team": { "id": 770, "name": "Mexico", "tla": "MEX", "crest": "" },
           "playedGames": 1,
           "won": 1,
           "draw": 0,
@@ -20,7 +20,7 @@
         },
         {
           "position": 2,
-          "team": { "id": 8029, "name": "South Korea", "tla": "KOR", "crest": "https://crests.football-data.org/8029.png" },
+          "team": { "id": 8029, "name": "South Korea", "tla": "KOR", "crest": "" },
           "playedGames": 0,
           "won": 0,
           "draw": 0,
@@ -32,7 +32,7 @@
         },
         {
           "position": 3,
-          "team": { "id": 805, "name": "Egypt", "tla": "EGY", "crest": "https://crests.football-data.org/805.png" },
+          "team": { "id": 805, "name": "Egypt", "tla": "EGY", "crest": "" },
           "playedGames": 0,
           "won": 0,
           "draw": 0,
@@ -44,7 +44,7 @@
         },
         {
           "position": 4,
-          "team": { "id": 1031, "name": "South Africa", "tla": "RSA", "crest": "https://crests.football-data.org/1031.png" },
+          "team": { "id": 1031, "name": "South Africa", "tla": "RSA", "crest": "" },
           "playedGames": 1,
           "won": 0,
           "draw": 0,
@@ -63,7 +63,7 @@
       "table": [
         {
           "position": 1,
-          "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "https://crests.football-data.org/784.png" },
+          "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "" },
           "playedGames": 1,
           "won": 1,
           "draw": 0,
@@ -75,7 +75,7 @@
         },
         {
           "position": 2,
-          "team": { "id": 773, "name": "France", "tla": "FRA", "crest": "https://crests.football-data.org/773.png" },
+          "team": { "id": 773, "name": "France", "tla": "FRA", "crest": "" },
           "playedGames": 0,
           "won": 0,
           "draw": 0,
@@ -87,7 +87,7 @@
         },
         {
           "position": 3,
-          "team": { "id": 8601, "name": "Saudi Arabia", "tla": "KSA", "crest": "https://crests.football-data.org/8601.png" },
+          "team": { "id": 8601, "name": "Saudi Arabia", "tla": "KSA", "crest": "" },
           "playedGames": 0,
           "won": 0,
           "draw": 0,
@@ -99,7 +99,7 @@
         },
         {
           "position": 4,
-          "team": { "id": 8030, "name": "Canada", "tla": "CAN", "crest": "https://crests.football-data.org/8030.png" },
+          "team": { "id": 8030, "name": "Canada", "tla": "CAN", "crest": "" },
           "playedGames": 1,
           "won": 0,
           "draw": 0,

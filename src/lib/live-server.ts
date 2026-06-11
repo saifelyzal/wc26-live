@@ -17,6 +17,7 @@ export class LiveServer {
   readonly mock: boolean;
   private api: FootballApi;
   private tick = 0;
+  private baseMatches: MatchVM[] | null = null;
   private current: MatchesState | null = null;
   private timer: ReturnType<typeof setTimeout> | null = null;
   private refreshing: Promise<MatchesState> | null = null;
@@ -61,12 +62,16 @@ export class LiveServer {
 
     if (this.mock) {
       this.tick += 1;
-      const base = prev?.matches ?? (await this.api.getMatches()).data;
-      next = {
-        matches: prev ? simulateTick(base, this.tick) : base,
-        updatedAt: Date.now(),
-        stale: false,
-      };
+      this.baseMatches ??= (await this.api.getMatches()).data;
+      let matches = prev
+        ? simulateTick(prev.matches, this.tick)
+        : this.baseMatches;
+      // Loop the demo: once a simulated match runs past 90', restart from
+      // the fixture baseline instead of accumulating goals forever.
+      if (matches.some((m) => m.status === "LIVE" && (m.minute ?? 0) > 90)) {
+        matches = this.baseMatches;
+      }
+      next = { matches, updatedAt: Date.now(), stale: false };
     } else {
       const result = await this.api.getMatches();
       next = { matches: result.data, updatedAt: result.updatedAt, stale: result.stale };
