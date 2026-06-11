@@ -4,6 +4,20 @@ import history from "@/data/history.json";
 
 type HistoryTeam = { code?: string; name: string };
 
+type Tournament = {
+  year: number;
+  hosts: HistoryTeam[];
+  winner: HistoryTeam;
+  runnerUp: HistoryTeam;
+  third: HistoryTeam;
+  finalScore: string;
+  topScorers: { player: string; team: HistoryTeam; goals: number }[];
+  teams: number;
+  matches: number;
+  goals: number;
+  note?: string;
+};
+
 function Team({
   team,
   locale,
@@ -33,7 +47,7 @@ export default async function HistoryPage({
   const overrides = (name: string) =>
     tTeams.has(name) ? tTeams(name) : undefined;
 
-  const tournaments = [...history.tournaments].reverse();
+  const tournaments = [...(history.tournaments as Tournament[])].reverse();
 
   return (
     <div className="space-y-6">

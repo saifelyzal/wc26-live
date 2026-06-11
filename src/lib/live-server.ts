@@ -37,15 +37,30 @@ export class LiveServer {
 
   async getMatches(): Promise<MatchesState> {
     if (this.current) return this.current;
-    return this.refresh();
+    try {
+      return await this.refresh();
+    } catch (error) {
+      console.error("[live-server] matches unavailable:", error);
+      return { matches: [], updatedAt: Date.now(), stale: true };
+    }
   }
 
-  getStandings() {
-    return this.api.getStandings();
+  async getStandings() {
+    try {
+      return await this.api.getStandings();
+    } catch (error) {
+      console.error("[live-server] standings unavailable:", error);
+      return { data: [], updatedAt: Date.now(), stale: true };
+    }
   }
 
-  getScorers() {
-    return this.api.getScorers();
+  async getScorers() {
+    try {
+      return await this.api.getScorers();
+    } catch (error) {
+      console.error("[live-server] scorers unavailable:", error);
+      return { data: [], updatedAt: Date.now(), stale: true };
+    }
   }
 
   private async refresh(): Promise<MatchesState> {

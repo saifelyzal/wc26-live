@@ -32,10 +32,13 @@ export function HomeDashboard({
   const tc = useTranslations("common");
   const state = useLiveMatches(initial);
 
+  // Same fixed zone as the i18n formatter, so SSR and client agree on "today".
+  const dayInET = (date: Date) =>
+    date.toLocaleDateString("en-US", { timeZone: "America/New_York" });
   const live = state.matches.filter((m) => m.status === "LIVE");
-  const today = new Date().toDateString();
+  const today = dayInET(new Date());
   const todays = state.matches.filter(
-    (m) => new Date(m.kickoff).toDateString() === today && m.status !== "LIVE",
+    (m) => dayInET(new Date(m.kickoff)) === today && m.status !== "LIVE",
   );
   const upcoming = state.matches
     .filter((m) => m.status === "UPCOMING")
