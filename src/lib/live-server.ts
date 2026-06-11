@@ -28,6 +28,10 @@ export type SyncResultsState = MatchesState & {
 
 const MOCK_TICK_MS = 5_000;
 
+export function needsScoreBackfill(matches: MatchVM[]): boolean {
+  return matches.some((match) => match.status === "FINISHED" && !match.score);
+}
+
 export class LiveServer {
   readonly hub = new LiveHub();
   readonly mock: boolean;
@@ -128,7 +132,8 @@ export class LiveServer {
         mergeLiveOverlay(result.data, overlays),
         Date.now(),
       );
-      const backfilled = includeNativeStats
+      const shouldBackfill = includeNativeStats || needsScoreBackfill(settled);
+      const backfilled = shouldBackfill
         ? mergeNativeStatsResults(
             settled,
             await fetchNativeStatsResults().catch((error) => {
