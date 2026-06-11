@@ -1,18 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
-// Must match the timeZone in src/i18n/request.ts so the first client
-// render equals the server render; the effect then swaps in the
-// browser's zone without a hydration mismatch.
+// Must match the timeZone in src/i18n/request.ts so server rendering and
+// hydration agree; after hydration React swaps in the browser's zone.
 export const SSR_TIME_ZONE = "America/New_York";
 
+const subscribe = () => () => {};
+
 export function useDisplayTimeZone(): string {
-  const [tz, setTz] = useState(SSR_TIME_ZONE);
-  useEffect(() => {
-    setTz(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  }, []);
-  return tz;
+  return useSyncExternalStore(
+    subscribe,
+    () => Intl.DateTimeFormat().resolvedOptions().timeZone,
+    () => SSR_TIME_ZONE,
+  );
 }
 
 /** YYYY-MM-DD of a date in the given zone (for day grouping). */
