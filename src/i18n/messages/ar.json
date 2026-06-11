@@ -1,0 +1,105 @@
+{
+  "common": {
+    "appName": "كأس العالم ٢٦ مباشر",
+    "live": "مباشر",
+    "fullTime": "انتهت",
+    "halfTime": "الشوط الأول",
+    "kickoff": "ضربة البداية",
+    "group": "المجموعة {name}",
+    "matchday": "الجولة {n}",
+    "lastUpdated": "آخر تحديث {time}",
+    "staleNotice": "انقطع البث المباشر — تُعرض بيانات من {time}",
+    "mockNotice": "وضع تجريبي — بيانات محاكاة",
+    "viewAll": "عرض الكل",
+    "language": "اللغة"
+  },
+  "nav": {
+    "home": "مباشر",
+    "matches": "المباريات",
+    "groups": "المجموعات",
+    "bracket": "الأدوار الإقصائية",
+    "stats": "الإحصائيات",
+    "history": "التاريخ"
+  },
+  "home": {
+    "title": "النتائج المباشرة",
+    "liveNow": "تُلعب الآن",
+    "todaysMatches": "مباريات اليوم",
+    "upcomingMatches": "المباريات القادمة",
+    "noMatchesToday": "لا توجد مباريات اليوم — اطّلع على الجدول الكامل",
+    "standings": "ترتيب المجموعات",
+    "topScorers": "الهدافون"
+  },
+  "matches": {
+    "title": "جدول المباريات",
+    "noMatches": "لم يتم العثور على مباريات"
+  },
+  "match": {
+    "timeline": "أحداث المباراة",
+    "noEvents": "لا توجد أحداث بعد",
+    "goal": "هدف",
+    "ownGoal": "هدف في مرماه",
+    "penalty": "ركلة جزاء",
+    "yellowCard": "بطاقة صفراء",
+    "redCard": "بطاقة حمراء",
+    "halfTimeScore": "الشوط الأول {score}",
+    "notStarted": "لم تبدأ هذه المباراة بعد",
+    "stage": "المرحلة"
+  },
+  "groups": {
+    "title": "ترتيب المجموعات",
+    "played": "لعب",
+    "won": "فاز",
+    "draw": "تعادل",
+    "lost": "خسر",
+    "goalsFor": "له",
+    "goalsAgainst": "عليه",
+    "goalDifference": "الفارق",
+    "points": "نقاط"
+  },
+  "bracket": {
+    "title": "جدول الأدوار الإقصائية",
+    "empty": "تبدأ الأدوار الإقصائية بعد انتهاء دور المجموعات. سيكتمل الجدول مع حسم المجموعات."
+  },
+  "stats": {
+    "title": "الهدافون",
+    "player": "اللاعب",
+    "team": "المنتخب",
+    "goals": "أهداف",
+    "assists": "تمريرات حاسمة",
+    "played": "مباريات",
+    "empty": "لم تُسجّل أهداف بعد"
+  },
+  "history": {
+    "title": "بطولات كأس العالم السابقة",
+    "subtitle": "جميع البطولات منذ عام ١٩٣٠",
+    "winner": "البطل",
+    "runnerUp": "الوصيف",
+    "third": "المركز الثالث",
+    "final": "النهائي",
+    "hosts": "البلد المضيف",
+    "topScorer": "الهداف",
+    "teams": "{n} منتخبًا",
+    "matches": "{n} مباراة",
+    "goals": "{n} هدفًا",
+    "goalCount": "{n} أهداف",
+    "decidedByFinalGroup": "حُسمت بمجموعة نهائية"
+  },
+  "teams": {
+    "England": "إنجلترا",
+    "West Germany": "ألمانيا الغربية",
+    "Czechoslovakia": "تشيكوسلوفاكيا",
+    "Soviet Union": "الاتحاد السوفيتي",
+    "Yugoslavia": "يوغوسلافيا"
+  },
+  "stages": {
+    "GROUP_STAGE": "دور المجموعات",
+    "LAST_64": "دور الـ64",
+    "LAST_32": "دور الـ32",
+    "LAST_16": "دور الـ16",
+    "QUARTER_FINALS": "ربع النهائي",
+    "SEMI_FINALS": "نصف النهائي",
+    "THIRD_PLACE": "المركز الثالث",
+    "FINAL": "النهائي"
+  }
+}

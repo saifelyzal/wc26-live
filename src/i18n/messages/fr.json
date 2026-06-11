@@ -1,0 +1,105 @@
+{
+  "common": {
+    "appName": "Mondial 26 En Direct",
+    "live": "EN DIRECT",
+    "fullTime": "TER",
+    "halfTime": "MT",
+    "kickoff": "Coup d'envoi",
+    "group": "Groupe {name}",
+    "matchday": "Journée {n}",
+    "lastUpdated": "Mis à jour {time}",
+    "staleNotice": "Flux interrompu — données de {time}",
+    "mockNotice": "Mode démo — données simulées",
+    "viewAll": "Tout voir",
+    "language": "Langue"
+  },
+  "nav": {
+    "home": "Direct",
+    "matches": "Matchs",
+    "groups": "Groupes",
+    "bracket": "Tableau",
+    "stats": "Stats",
+    "history": "Histoire"
+  },
+  "home": {
+    "title": "Tableau des scores en direct",
+    "liveNow": "En cours",
+    "todaysMatches": "Matchs du jour",
+    "upcomingMatches": "Prochains matchs",
+    "noMatchesToday": "Pas de match aujourd'hui — consultez le calendrier complet",
+    "standings": "Classements des groupes",
+    "topScorers": "Meilleurs buteurs"
+  },
+  "matches": {
+    "title": "Calendrier des matchs",
+    "noMatches": "Aucun match trouvé"
+  },
+  "match": {
+    "timeline": "Fil du match",
+    "noEvents": "Aucun événement pour l'instant",
+    "goal": "But",
+    "ownGoal": "But contre son camp",
+    "penalty": "Penalty",
+    "yellowCard": "Carton jaune",
+    "redCard": "Carton rouge",
+    "halfTimeScore": "Mi-temps {score}",
+    "notStarted": "Ce match n'a pas encore commencé",
+    "stage": "Phase"
+  },
+  "groups": {
+    "title": "Classements des groupes",
+    "played": "J",
+    "won": "G",
+    "draw": "N",
+    "lost": "P",
+    "goalsFor": "BP",
+    "goalsAgainst": "BC",
+    "goalDifference": "Diff",
+    "points": "Pts"
+  },
+  "bracket": {
+    "title": "Tableau final",
+    "empty": "La phase à élimination directe commence après la phase de groupes. Le tableau se remplira au fil des qualifications."
+  },
+  "stats": {
+    "title": "Meilleurs buteurs",
+    "player": "Joueur",
+    "team": "Équipe",
+    "goals": "Buts",
+    "assists": "Passes décisives",
+    "played": "Joués",
+    "empty": "Aucun but marqué pour l'instant"
+  },
+  "history": {
+    "title": "Coupes du monde passées",
+    "subtitle": "Tous les tournois depuis 1930",
+    "winner": "Champion",
+    "runnerUp": "Finaliste",
+    "third": "Troisième",
+    "final": "Finale",
+    "hosts": "Pays hôte",
+    "topScorer": "Meilleur buteur",
+    "teams": "{n} équipes",
+    "matches": "{n} matchs",
+    "goals": "{n} buts",
+    "goalCount": "{n} buts",
+    "decidedByFinalGroup": "Décidé par une poule finale"
+  },
+  "teams": {
+    "England": "Angleterre",
+    "West Germany": "Allemagne de l'Ouest",
+    "Czechoslovakia": "Tchécoslovaquie",
+    "Soviet Union": "Union soviétique",
+    "Yugoslavia": "Yougoslavie"
+  },
+  "stages": {
+    "GROUP_STAGE": "Phase de groupes",
+    "LAST_64": "Trente-deuxièmes de finale",
+    "LAST_32": "Seizièmes de finale",
+    "LAST_16": "Huitièmes de finale",
+    "QUARTER_FINALS": "Quarts de finale",
+    "SEMI_FINALS": "Demi-finales",
+    "THIRD_PLACE": "Troisième place",
+    "FINAL": "Finale"
+  }
+}

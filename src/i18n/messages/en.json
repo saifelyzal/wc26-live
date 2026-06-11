@@ -1,0 +1,105 @@
+{
+  "common": {
+    "appName": "World Cup 26 Live",
+    "live": "LIVE",
+    "fullTime": "FT",
+    "halfTime": "HT",
+    "kickoff": "Kick-off",
+    "group": "Group {name}",
+    "matchday": "Matchday {n}",
+    "lastUpdated": "Updated {time}",
+    "staleNotice": "Live feed interrupted — showing data from {time}",
+    "mockNotice": "Demo mode — simulated match data",
+    "viewAll": "View all",
+    "language": "Language"
+  },
+  "nav": {
+    "home": "Live",
+    "matches": "Matches",
+    "groups": "Groups",
+    "bracket": "Bracket",
+    "stats": "Stats",
+    "history": "History"
+  },
+  "home": {
+    "title": "Live scoreboard",
+    "liveNow": "Live now",
+    "todaysMatches": "Today's matches",
+    "upcomingMatches": "Upcoming matches",
+    "noMatchesToday": "No matches today — see the full schedule",
+    "standings": "Group standings",
+    "topScorers": "Top scorers"
+  },
+  "matches": {
+    "title": "Match schedule",
+    "noMatches": "No matches found"
+  },
+  "match": {
+    "timeline": "Match timeline",
+    "noEvents": "No events yet",
+    "goal": "Goal",
+    "ownGoal": "Own goal",
+    "penalty": "Penalty",
+    "yellowCard": "Yellow card",
+    "redCard": "Red card",
+    "halfTimeScore": "Half-time {score}",
+    "notStarted": "This match has not started yet",
+    "stage": "Stage"
+  },
+  "groups": {
+    "title": "Group standings",
+    "played": "P",
+    "won": "W",
+    "draw": "D",
+    "lost": "L",
+    "goalsFor": "GF",
+    "goalsAgainst": "GA",
+    "goalDifference": "GD",
+    "points": "Pts"
+  },
+  "bracket": {
+    "title": "Knockout bracket",
+    "empty": "The knockout stage begins after the group stage. Bracket slots will fill in as groups are decided."
+  },
+  "stats": {
+    "title": "Top scorers",
+    "player": "Player",
+    "team": "Team",
+    "goals": "Goals",
+    "assists": "Assists",
+    "played": "Played",
+    "empty": "No goals scored yet"
+  },
+  "history": {
+    "title": "Past World Cups",
+    "subtitle": "Every tournament since 1930",
+    "winner": "Champions",
+    "runnerUp": "Runners-up",
+    "third": "Third place",
+    "final": "Final",
+    "hosts": "Hosts",
+    "topScorer": "Top scorer",
+    "teams": "{n} teams",
+    "matches": "{n} matches",
+    "goals": "{n} goals",
+    "goalCount": "{n} goals",
+    "decidedByFinalGroup": "Decided by a final group stage"
+  },
+  "teams": {
+    "England": "England",
+    "West Germany": "West Germany",
+    "Czechoslovakia": "Czechoslovakia",
+    "Soviet Union": "Soviet Union",
+    "Yugoslavia": "Yugoslavia"
+  },
+  "stages": {
+    "GROUP_STAGE": "Group stage",
+    "LAST_64": "Round of 64",
+    "LAST_32": "Round of 32",
+    "LAST_16": "Round of 16",
+    "QUARTER_FINALS": "Quarter-finals",
+    "SEMI_FINALS": "Semi-finals",
+    "THIRD_PLACE": "Third place",
+    "FINAL": "Final"
+  }
+}

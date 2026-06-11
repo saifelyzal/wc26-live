@@ -1,0 +1,105 @@
+{
+  "common": {
+    "appName": "Mundial 26 En Vivo",
+    "live": "EN VIVO",
+    "fullTime": "FIN",
+    "halfTime": "DT",
+    "kickoff": "Inicio",
+    "group": "Grupo {name}",
+    "matchday": "Jornada {n}",
+    "lastUpdated": "Actualizado {time}",
+    "staleNotice": "Señal interrumpida — mostrando datos de {time}",
+    "mockNotice": "Modo demo — datos simulados",
+    "viewAll": "Ver todo",
+    "language": "Idioma"
+  },
+  "nav": {
+    "home": "En vivo",
+    "matches": "Partidos",
+    "groups": "Grupos",
+    "bracket": "Eliminatorias",
+    "stats": "Estadísticas",
+    "history": "Historia"
+  },
+  "home": {
+    "title": "Marcador en vivo",
+    "liveNow": "Ahora en juego",
+    "todaysMatches": "Partidos de hoy",
+    "upcomingMatches": "Próximos partidos",
+    "noMatchesToday": "Hoy no hay partidos — consulta el calendario completo",
+    "standings": "Tablas de grupos",
+    "topScorers": "Máximos goleadores"
+  },
+  "matches": {
+    "title": "Calendario de partidos",
+    "noMatches": "No se encontraron partidos"
+  },
+  "match": {
+    "timeline": "Cronología del partido",
+    "noEvents": "Aún no hay incidencias",
+    "goal": "Gol",
+    "ownGoal": "Autogol",
+    "penalty": "Penal",
+    "yellowCard": "Tarjeta amarilla",
+    "redCard": "Tarjeta roja",
+    "halfTimeScore": "Descanso {score}",
+    "notStarted": "Este partido aún no ha comenzado",
+    "stage": "Fase"
+  },
+  "groups": {
+    "title": "Tablas de grupos",
+    "played": "PJ",
+    "won": "G",
+    "draw": "E",
+    "lost": "P",
+    "goalsFor": "GF",
+    "goalsAgainst": "GC",
+    "goalDifference": "DG",
+    "points": "Pts"
+  },
+  "bracket": {
+    "title": "Cuadro eliminatorio",
+    "empty": "La fase eliminatoria comienza tras la fase de grupos. El cuadro se irá completando a medida que se definan los grupos."
+  },
+  "stats": {
+    "title": "Máximos goleadores",
+    "player": "Jugador",
+    "team": "Selección",
+    "goals": "Goles",
+    "assists": "Asistencias",
+    "played": "Jugados",
+    "empty": "Aún no se han marcado goles"
+  },
+  "history": {
+    "title": "Mundiales anteriores",
+    "subtitle": "Todos los torneos desde 1930",
+    "winner": "Campeón",
+    "runnerUp": "Subcampeón",
+    "third": "Tercer puesto",
+    "final": "Final",
+    "hosts": "Sede",
+    "topScorer": "Máximo goleador",
+    "teams": "{n} selecciones",
+    "matches": "{n} partidos",
+    "goals": "{n} goles",
+    "goalCount": "{n} goles",
+    "decidedByFinalGroup": "Decidido en un grupo final"
+  },
+  "teams": {
+    "England": "Inglaterra",
+    "West Germany": "Alemania Federal",
+    "Czechoslovakia": "Checoslovaquia",
+    "Soviet Union": "Unión Soviética",
+    "Yugoslavia": "Yugoslavia"
+  },
+  "stages": {
+    "GROUP_STAGE": "Fase de grupos",
+    "LAST_64": "Treintaidosavos de final",
+    "LAST_32": "Dieciseisavos de final",
+    "LAST_16": "Octavos de final",
+    "QUARTER_FINALS": "Cuartos de final",
+    "SEMI_FINALS": "Semifinales",
+    "THIRD_PLACE": "Tercer puesto",
+    "FINAL": "Final"
+  }
+}
