@@ -3,7 +3,11 @@ import { fetchLiveOverlays } from "./espn-live";
 import { LiveHub } from "./live-hub";
 import { nextPollDelay } from "./poller";
 import { simulateTick } from "./live-sim";
-import { createResultStore } from "./result-store";
+import {
+  fetchNativeStatsResults,
+  mergeNativeStatsResults,
+} from "./native-stats";
+import { createResultStore, type RememberSummary } from "./result-store";
 import {
   diffMatches,
   mergeLiveOverlay,
@@ -17,6 +21,11 @@ export type MatchesState = {
   stale: boolean;
 };
 
+export type SyncResultsState = MatchesState & {
+  storedResults: number;
+  changedResults: number;
+};
+
 const MOCK_TICK_MS = 5_000;
 
 export class LiveServer {
@@ -26,6 +35,7 @@ export class LiveServer {
   private tick = 0;
   private baseMatches: MatchVM[] | null = null;
   private current: MatchesState | null = null;
+  private lastRemember: RememberSummary = { stored: 0, changed: 0 };
   private resultStore = createResultStore();
   private timer: ReturnType<typeof setTimeout> | null = null;
   private refreshing: Promise<MatchesState> | null = null;
@@ -53,6 +63,15 @@ export class LiveServer {
     }
   }
 
+  async syncResults(): Promise<SyncResultsState> {
+    const state = await this.refresh({ includeNativeStats: true });
+    return {
+      ...state,
+      storedResults: this.lastRemember.stored,
+      changedResults: this.lastRemember.changed,
+    };
+  }
+
   async getStandings() {
     try {
       return await this.api.getStandings();
@@ -71,15 +90,19 @@ export class LiveServer {
     }
   }
 
-  private async refresh(): Promise<MatchesState> {
+  private async refresh(options: { includeNativeStats?: boolean } = {}): Promise<MatchesState> {
     if (this.refreshing) return this.refreshing;
-    this.refreshing = this.doRefresh().finally(() => {
+    this.refreshing = this.doRefresh(options).finally(() => {
       this.refreshing = null;
     });
     return this.refreshing;
   }
 
-  private async doRefresh(): Promise<MatchesState> {
+  private async doRefresh({
+    includeNativeStats = false,
+  }: {
+    includeNativeStats?: boolean;
+  } = {}): Promise<MatchesState> {
     const prev = this.current;
     let next: MatchesState;
 
@@ -90,7 +113,7 @@ export class LiveServer {
         ? simulateTick(prev.matches, this.tick)
         : this.baseMatches;
       const hydrated = this.resultStore.hydrate(matches);
-      this.resultStore.remember(hydrated);
+      this.lastRemember = this.resultStore.remember(hydrated);
       next = { matches: hydrated, updatedAt: Date.now(), stale: false };
     } else {
       const [result, overlays] = await Promise.all([
@@ -101,10 +124,21 @@ export class LiveServer {
           return [];
         }),
       ]);
-      const matches = this.resultStore.hydrate(
-        settleExpiredMatches(mergeLiveOverlay(result.data, overlays), Date.now()),
+      const settled = settleExpiredMatches(
+        mergeLiveOverlay(result.data, overlays),
+        Date.now(),
       );
-      this.resultStore.remember(matches);
+      const backfilled = includeNativeStats
+        ? mergeNativeStatsResults(
+            settled,
+            await fetchNativeStatsResults().catch((error) => {
+              console.error("[live-server] native-stats unavailable:", error);
+              return [];
+            }),
+          )
+        : settled;
+      const matches = this.resultStore.hydrate(backfilled);
+      this.lastRemember = this.resultStore.remember(matches);
       next = { matches, updatedAt: Date.now(), stale: result.stale };
     }
 

@@ -23,6 +23,11 @@ type StoreFile = {
   results: StoredResult[];
 };
 
+export type RememberSummary = {
+  stored: number;
+  changed: number;
+};
+
 const DEFAULT_PATH = join(process.cwd(), ".data", "match-results.json");
 
 function hasStats(stats: MatchStatsVM): boolean {
@@ -61,9 +66,19 @@ function mergeStored(match: MatchVM, stored: StoredResult | undefined): StoredRe
   };
 }
 
+function sameStoredResult(a: StoredResult, b: StoredResult): boolean {
+  return (
+    a.kickoff === b.kickoff &&
+    a.status === b.status &&
+    JSON.stringify(a.score) === JSON.stringify(b.score) &&
+    JSON.stringify(a.events) === JSON.stringify(b.events) &&
+    JSON.stringify(a.stats) === JSON.stringify(b.stats)
+  );
+}
+
 export type MatchResultStore = {
   hydrate(matches: MatchVM[]): MatchVM[];
-  remember(matches: MatchVM[]): void;
+  remember(matches: MatchVM[]): RememberSummary;
 };
 
 export class FileResultStore implements MatchResultStore {
@@ -92,21 +107,26 @@ export class FileResultStore implements MatchResultStore {
     });
   }
 
-  remember(matches: MatchVM[]) {
+  remember(matches: MatchVM[]): RememberSummary {
     const results = this.read();
     let changed = false;
+    let storedCount = 0;
+    let changedCount = 0;
 
     for (const match of matches) {
       if (!shouldStore(match)) continue;
+      storedCount += 1;
       const stored = results.get(match.id);
       const next = mergeStored(match, stored);
-      if (JSON.stringify(stored) !== JSON.stringify(next)) {
+      if (!stored || !sameStoredResult(stored, next)) {
         results.set(match.id, next);
         changed = true;
+        changedCount += 1;
       }
     }
 
     if (changed) this.write(results);
+    return { stored: storedCount, changed: changedCount };
   }
 
   private read(): Map<number, StoredResult> {

@@ -80,4 +80,12 @@ describe("ResultStore", () => {
     const [hydrated] = store.hydrate([corrected]);
     expect(hydrated.score).toEqual({ home: 3, away: 1 });
   });
+
+  test("reports no changed rows when remembered data is unchanged", () => {
+    const store = createResultStore(storePath());
+    const live = mexicoMatch();
+
+    expect(store.remember([live])).toEqual({ stored: 1, changed: 1 });
+    expect(store.remember([live])).toEqual({ stored: 1, changed: 0 });
+  });
 });

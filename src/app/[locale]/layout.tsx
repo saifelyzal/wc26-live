@@ -45,6 +45,11 @@ export async function generateMetadata({
       "Live World Cup 26 scores, schedules, groups, bracket, and stats.",
     manifest: "/manifest.webmanifest",
     icons: {
+      icon: [
+        { url: "/icon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "64x64" },
+      ],
+      shortcut: ["/favicon.ico"],
       apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     },
     appleWebApp: {
