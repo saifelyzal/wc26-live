@@ -11,7 +11,8 @@
     "staleNotice": "انقطع البث المباشر — تُعرض بيانات من {time}",
     "mockNotice": "وضع تجريبي — بيانات محاكاة",
     "viewAll": "عرض الكل",
-    "language": "اللغة"
+    "language": "اللغة",
+    "resultPending": "النتيجة قيد التحديث"
   },
   "nav": {
     "home": "مباشر",
@@ -24,6 +25,7 @@
   "home": {
     "title": "النتائج المباشرة",
     "liveNow": "تُلعب الآن",
+    "latestResults": "آخر النتائج",
     "todaysMatches": "مباريات اليوم",
     "upcomingMatches": "المباريات القادمة",
     "noMatchesToday": "لا توجد مباريات اليوم — اطّلع على الجدول الكامل",
@@ -36,12 +38,20 @@
   },
   "match": {
     "timeline": "أحداث المباراة",
+    "matchStats": "إحصائيات المباراة",
     "noEvents": "لا توجد أحداث بعد",
     "goal": "هدف",
+    "goals": "الأهداف",
     "ownGoal": "هدف في مرماه",
     "penalty": "ركلة جزاء",
+    "penalties": "ركلات الجزاء",
+    "assist": "تمريرة حاسمة",
     "yellowCard": "بطاقة صفراء",
+    "yellowCards": "البطاقات الصفراء",
     "redCard": "بطاقة حمراء",
+    "redCards": "البطاقات الحمراء",
+    "totalCards": "مجموع البطاقات",
+    "halfTime": "الشوط الأول",
     "halfTimeScore": "الشوط الأول {score}",
     "notStarted": "لم تبدأ هذه المباراة بعد",
     "stage": "المرحلة"
@@ -55,7 +65,8 @@
     "goalsFor": "له",
     "goalsAgainst": "عليه",
     "goalDifference": "الفارق",
-    "points": "نقاط"
+    "points": "نقاط",
+    "results": "النتائج"
   },
   "bracket": {
     "title": "جدول الأدوار الإقصائية",

@@ -136,6 +136,11 @@ export function MatchCard({
           winner={(match.score?.away ?? 0) >= (match.score?.home ?? 0)}
         />
       </div>
+      {match.status === "FINISHED" && !match.score && (
+        <p className="mt-3 rounded-xl bg-pitch-950/5 px-3 py-2 text-center text-xs font-extrabold uppercase tracking-wider text-pitch-950/50">
+          {t("resultPending")}
+        </p>
+      )}
     </Link>
   );
 }

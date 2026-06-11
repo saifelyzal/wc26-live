@@ -18,6 +18,7 @@ A live analytics/stats website for the FIFA World Cup 2026 with real-time score 
 | Home layout | "Scoreboard-first": live match cards on top, standings/leaderboard previews below |
 | Visual direction | "Tournament festival": vibrant green/blue host-nation gradients, white score cards |
 | Deployment | NexusAI, API key as secret |
+| Result persistence | Server-side result store; default adapter writes `.data/match-results.json` on persistent NexusAI storage |
 
 ## Architecture
 
@@ -26,6 +27,7 @@ One Next.js app with three roles:
 1. **UI** — locale-prefixed pages (`/[locale]/...`) via `next-intl`.
 2. **API proxy + cache** — server-only fetcher for football-data.org v4; the key never reaches the browser. In-memory TTL cache + rate budgeter staying under 10 req/min. Adaptive poll loop: ~30s while matches are live, several minutes otherwise.
 3. **Live fan-out** — SSE endpoint `/api/live` broadcasts diffs from the single poll loop to all connected clients (N viewers cost the same API budget as one). Client falls back to 60s polling if SSE drops.
+4. **Result persistence** — completed/live match results are remembered server-side and merged back into feed responses when football-data.org returns delayed or incomplete final scores. The current adapter is file-backed for NexusAI writable storage and can be replaced by a managed NexusAI datastore without changing UI components.
 
 Historical World Cups (1930–2022) ship as a static JSON dataset bundled in the repo — zero API calls.
 

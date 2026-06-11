@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { nextPollDelay } from "./poller";
 import { simulateTick } from "./live-sim";
-import { toMatches } from "./transformers";
+import { settleExpiredMatches, toMatches } from "./transformers";
 import matchesFixture from "./fixtures/matches.json";
 
 const matches = toMatches(matchesFixture);
@@ -66,5 +66,30 @@ describe("simulateTick", () => {
     expect(next.find((m) => m.id === 500004)).toEqual(
       matches.find((m) => m.id === 500004),
     );
+  });
+
+  test("finishes live matches when simulated time reaches full time", () => {
+    const live = matches.find((m) => m.id === 500002)!;
+    const nearFullTime = { ...live, minute: 89 };
+    const [after] = simulateTick([nearFullTime], 1);
+    expect(after.status).toBe("FINISHED");
+    expect(after.minute).toBeNull();
+  });
+});
+
+describe("settleExpiredMatches", () => {
+  test("marks stale upcoming matches as finished after the expected match window", () => {
+    const upcoming = matches.find((m) => m.id === 500004)!;
+    const kickoff = Date.parse(upcoming.kickoff);
+    const [after] = settleExpiredMatches([upcoming], kickoff + 166 * 60_000);
+    expect(after.status).toBe("FINISHED");
+    expect(after.minute).toBeNull();
+  });
+
+  test("keeps upcoming matches upcoming inside the expected match window", () => {
+    const upcoming = matches.find((m) => m.id === 500004)!;
+    const kickoff = Date.parse(upcoming.kickoff);
+    const [after] = settleExpiredMatches([upcoming], kickoff + 60 * 60_000);
+    expect(after.status).toBe("UPCOMING");
   });
 });

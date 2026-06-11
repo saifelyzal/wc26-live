@@ -20,9 +20,16 @@ export function simulateTick(matches: MatchVM[], tick: number): MatchVM[] {
           minute: next.minute,
           type: "goal",
           player: `${team.name} striker`,
+          assist: null,
           teamId: team.id,
         },
       ];
+      const stats = homeScores ? next.stats.home : next.stats.away;
+      stats.goals += 1;
+    }
+    if (next.minute >= 90) {
+      next.status = "FINISHED";
+      next.minute = null;
     }
     return next;
   });

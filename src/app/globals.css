@@ -43,6 +43,9 @@ body {
     radial-gradient(700px 700px at 50% 110%, rgba(245, 180, 0, 0.12), transparent 60%),
     linear-gradient(165deg, var(--color-pitch-900) 0%, var(--color-pitch-950) 45%, var(--color-ocean-950) 100%);
   background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
 }
 
 /* Subtle confetti grain over the festival gradient */
@@ -73,6 +76,14 @@ main {
 /* Score digits: keep widths steady as numbers tick */
 .tabular {
   font-variant-numeric: tabular-nums;
+}
+
+.mobile-scrollbar {
+  scrollbar-width: none;
+}
+
+.mobile-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes live-pulse {

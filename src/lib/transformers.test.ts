@@ -49,7 +49,31 @@ describe("toMatches", () => {
       [88, "red"],
     ]);
     expect(finished.events[0].player).toBe("Mateo Retegui");
+    expect(finished.events[0].assist).toBe("Nicolò Barella");
     expect(finished.events[0].teamId).toBe(784);
+  });
+
+  test("derives available team match stats", () => {
+    const finished = matches.find((m) => m.id === 500001)!;
+    expect(finished.stats).toEqual({
+      halfTime: { home: 0, away: 1 },
+      home: {
+        goals: 1,
+        penalties: 1,
+        ownGoals: 0,
+        yellowCards: 1,
+        redCards: 1,
+        totalCards: 2,
+      },
+      away: {
+        goals: 2,
+        penalties: 0,
+        ownGoals: 0,
+        yellowCards: 0,
+        redCards: 0,
+        totalCards: 0,
+      },
+    });
   });
 });
 
@@ -103,6 +127,25 @@ describe("toBracket", () => {
       away: { id: 2, name: "TBD", code: "TBD", crest: "" },
       score: null,
       events: [],
+      stats: {
+        halfTime: null,
+        home: {
+          goals: 0,
+          penalties: 0,
+          ownGoals: 0,
+          yellowCards: 0,
+          redCards: 0,
+          totalCards: 0,
+        },
+        away: {
+          goals: 0,
+          penalties: 0,
+          ownGoals: 0,
+          yellowCards: 0,
+          redCards: 0,
+          totalCards: 0,
+        },
+      },
     };
   }
 

@@ -3,7 +3,13 @@ import { fetchLiveOverlays } from "./espn-live";
 import { LiveHub } from "./live-hub";
 import { nextPollDelay } from "./poller";
 import { simulateTick } from "./live-sim";
-import { diffMatches, mergeLiveOverlay, type MatchVM } from "./transformers";
+import { createResultStore } from "./result-store";
+import {
+  diffMatches,
+  mergeLiveOverlay,
+  settleExpiredMatches,
+  type MatchVM,
+} from "./transformers";
 
 export type MatchesState = {
   matches: MatchVM[];
@@ -20,6 +26,7 @@ export class LiveServer {
   private tick = 0;
   private baseMatches: MatchVM[] | null = null;
   private current: MatchesState | null = null;
+  private resultStore = createResultStore();
   private timer: ReturnType<typeof setTimeout> | null = null;
   private refreshing: Promise<MatchesState> | null = null;
 
@@ -79,15 +86,12 @@ export class LiveServer {
     if (this.mock) {
       this.tick += 1;
       this.baseMatches ??= (await this.api.getMatches()).data;
-      let matches = prev
+      const matches = prev
         ? simulateTick(prev.matches, this.tick)
         : this.baseMatches;
-      // Loop the demo: once a simulated match runs past 90', restart from
-      // the fixture baseline instead of accumulating goals forever.
-      if (matches.some((m) => m.status === "LIVE" && (m.minute ?? 0) > 90)) {
-        matches = this.baseMatches;
-      }
-      next = { matches, updatedAt: Date.now(), stale: false };
+      const hydrated = this.resultStore.hydrate(matches);
+      this.resultStore.remember(hydrated);
+      next = { matches: hydrated, updatedAt: Date.now(), stale: false };
     } else {
       const [result, overlays] = await Promise.all([
         this.api.getMatches(),
@@ -97,11 +101,11 @@ export class LiveServer {
           return [];
         }),
       ]);
-      next = {
-        matches: mergeLiveOverlay(result.data, overlays),
-        updatedAt: Date.now(),
-        stale: result.stale,
-      };
+      const matches = this.resultStore.hydrate(
+        settleExpiredMatches(mergeLiveOverlay(result.data, overlays), Date.now()),
+      );
+      this.resultStore.remember(matches);
+      next = { matches, updatedAt: Date.now(), stale: result.stale };
     }
 
     this.current = next;

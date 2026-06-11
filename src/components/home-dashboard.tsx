@@ -40,6 +40,11 @@ export function HomeDashboard({
     (m) =>
       dayKey(new Date(m.kickoff), timeZone) === today && m.status !== "LIVE",
   );
+  const results = state.matches
+    .filter((m) => m.status === "FINISHED")
+    .sort((a, b) => b.kickoff.localeCompare(a.kickoff))
+    .slice(0, 6);
+  const remainingToday = todays.filter((m) => m.status !== "FINISHED");
   const upcoming = state.matches
     .filter((m) => m.status === "UPCOMING")
     .slice(0, 6);
@@ -74,11 +79,22 @@ export function HomeDashboard({
         </section>
       )}
 
+      {results.length > 0 && (
+        <section>
+          <SectionTitle>{t("latestResults")}</SectionTitle>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {results.map((m, i) => (
+              <MatchCard key={m.id} match={m} index={i} />
+            ))}
+          </div>
+        </section>
+      )}
+
       <section>
         <SectionTitle>
-          {todays.length > 0 ? t("todaysMatches") : t("upcomingMatches")}
+          {remainingToday.length > 0 ? t("todaysMatches") : t("upcomingMatches")}
         </SectionTitle>
-        {todays.length === 0 && upcoming.length === 0 ? (
+        {remainingToday.length === 0 && upcoming.length === 0 ? (
           <Link
             href="/matches"
             className="block rounded-2xl bg-white/5 p-8 text-center text-white/60 transition-colors hover:bg-white/10"
@@ -87,7 +103,7 @@ export function HomeDashboard({
           </Link>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {(todays.length > 0 ? todays : upcoming).map((m, i) => (
+            {(remainingToday.length > 0 ? remainingToday : upcoming).map((m, i) => (
               <MatchCard key={m.id} match={m} index={i} />
             ))}
           </div>
@@ -107,7 +123,7 @@ export function HomeDashboard({
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {standings.slice(0, 2).map((g) => (
-              <GroupTable key={g.group} group={g} mini />
+              <GroupTable key={g.group} group={g} matches={state.matches} mini />
             ))}
           </div>
         </section>

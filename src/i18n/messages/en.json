@@ -11,7 +11,8 @@
     "staleNotice": "Live feed interrupted — showing data from {time}",
     "mockNotice": "Demo mode — simulated match data",
     "viewAll": "View all",
-    "language": "Language"
+    "language": "Language",
+    "resultPending": "Result pending"
   },
   "nav": {
     "home": "Live",
@@ -24,6 +25,7 @@
   "home": {
     "title": "Live scoreboard",
     "liveNow": "Live now",
+    "latestResults": "Latest results",
     "todaysMatches": "Today's matches",
     "upcomingMatches": "Upcoming matches",
     "noMatchesToday": "No matches today — see the full schedule",
@@ -36,12 +38,20 @@
   },
   "match": {
     "timeline": "Match timeline",
+    "matchStats": "Match stats",
     "noEvents": "No events yet",
     "goal": "Goal",
+    "goals": "Goals",
     "ownGoal": "Own goal",
     "penalty": "Penalty",
+    "penalties": "Penalties",
+    "assist": "Assist",
     "yellowCard": "Yellow card",
+    "yellowCards": "Yellow cards",
     "redCard": "Red card",
+    "redCards": "Red cards",
+    "totalCards": "Total cards",
+    "halfTime": "Half-time",
     "halfTimeScore": "Half-time {score}",
     "notStarted": "This match has not started yet",
     "stage": "Stage"
@@ -55,7 +65,8 @@
     "goalsFor": "GF",
     "goalsAgainst": "GA",
     "goalDifference": "GD",
-    "points": "Pts"
+    "points": "Pts",
+    "results": "Results"
   },
   "bracket": {
     "title": "Knockout bracket",

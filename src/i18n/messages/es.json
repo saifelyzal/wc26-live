@@ -11,7 +11,8 @@
     "staleNotice": "Señal interrumpida — mostrando datos de {time}",
     "mockNotice": "Modo demo — datos simulados",
     "viewAll": "Ver todo",
-    "language": "Idioma"
+    "language": "Idioma",
+    "resultPending": "Resultado pendiente"
   },
   "nav": {
     "home": "En vivo",
@@ -24,6 +25,7 @@
   "home": {
     "title": "Marcador en vivo",
     "liveNow": "Ahora en juego",
+    "latestResults": "Últimos resultados",
     "todaysMatches": "Partidos de hoy",
     "upcomingMatches": "Próximos partidos",
     "noMatchesToday": "Hoy no hay partidos — consulta el calendario completo",
@@ -36,12 +38,20 @@
   },
   "match": {
     "timeline": "Cronología del partido",
+    "matchStats": "Estadísticas del partido",
     "noEvents": "Aún no hay incidencias",
     "goal": "Gol",
+    "goals": "Goles",
     "ownGoal": "Autogol",
     "penalty": "Penal",
+    "penalties": "Penales",
+    "assist": "Asistencia",
     "yellowCard": "Tarjeta amarilla",
+    "yellowCards": "Tarjetas amarillas",
     "redCard": "Tarjeta roja",
+    "redCards": "Tarjetas rojas",
+    "totalCards": "Tarjetas totales",
+    "halfTime": "Descanso",
     "halfTimeScore": "Descanso {score}",
     "notStarted": "Este partido aún no ha comenzado",
     "stage": "Fase"
@@ -55,7 +65,8 @@
     "goalsFor": "GF",
     "goalsAgainst": "GC",
     "goalDifference": "DG",
-    "points": "Pts"
+    "points": "Pts",
+    "results": "Resultados"
   },
   "bracket": {
     "title": "Cuadro eliminatorio",

@@ -8,7 +8,10 @@ export default async function GroupsPage() {
   const t = await getTranslations("groups");
   const server = getLiveServer();
   server.start();
-  const standings = await server.getStandings();
+  const [standings, matches] = await Promise.all([
+    server.getStandings(),
+    server.getMatches(),
+  ]);
 
   return (
     <div className="space-y-6">
@@ -17,7 +20,7 @@ export default async function GroupsPage() {
       </h1>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {standings.data.map((group) => (
-          <GroupTable key={group.group} group={group} />
+          <GroupTable key={group.group} group={group} matches={matches.matches} />
         ))}
       </div>
     </div>

@@ -4,10 +4,26 @@ export type MatchEventVM = {
   minute: number;
   type: "goal" | "penalty" | "own-goal" | "yellow" | "red";
   player: string;
+  assist: string | null;
   teamId: number;
 };
 
 export type MatchStatus = "LIVE" | "UPCOMING" | "FINISHED" | "OTHER";
+
+export type TeamMatchStatsVM = {
+  goals: number;
+  penalties: number;
+  ownGoals: number;
+  yellowCards: number;
+  redCards: number;
+  totalCards: number;
+};
+
+export type MatchStatsVM = {
+  halfTime: { home: number; away: number } | null;
+  home: TeamMatchStatsVM;
+  away: TeamMatchStatsVM;
+};
 
 export type MatchVM = {
   id: number;
@@ -21,6 +37,7 @@ export type MatchVM = {
   away: TeamVM;
   score: { home: number; away: number } | null;
   events: MatchEventVM[];
+  stats: MatchStatsVM;
 };
 
 export type GroupRowVM = {
@@ -75,6 +92,8 @@ const KNOCKOUT_ORDER = [
   "FINAL",
 ];
 
+const AUTO_FINISH_AFTER_MS = 165 * 60_000;
+
 function toTeam(team: ApiJson): TeamVM {
   return {
     id: team.id,
@@ -110,15 +129,67 @@ function toEvents(match: ApiJson): MatchEventVM[] {
     minute: g.minute,
     type: goalType(g.type),
     player: g.scorer?.name ?? "",
+    assist: g.assist?.name ?? null,
     teamId: g.team?.id,
   }));
   const cards: MatchEventVM[] = (match.bookings ?? []).map((b: ApiJson) => ({
     minute: b.minute,
     type: b.card === "RED" ? "red" : "yellow",
     player: b.player?.name ?? "",
+    assist: null,
     teamId: b.team?.id,
   }));
   return [...goals, ...cards].sort((a, b) => a.minute - b.minute);
+}
+
+function emptyTeamStats(): TeamMatchStatsVM {
+  return {
+    goals: 0,
+    penalties: 0,
+    ownGoals: 0,
+    yellowCards: 0,
+    redCards: 0,
+    totalCards: 0,
+  };
+}
+
+function countEvent(stats: TeamMatchStatsVM, event: MatchEventVM) {
+  if (event.type === "goal") stats.goals += 1;
+  if (event.type === "penalty") {
+    stats.goals += 1;
+    stats.penalties += 1;
+  }
+  if (event.type === "own-goal") stats.ownGoals += 1;
+  if (event.type === "yellow") {
+    stats.yellowCards += 1;
+    stats.totalCards += 1;
+  }
+  if (event.type === "red") {
+    stats.redCards += 1;
+    stats.totalCards += 1;
+  }
+}
+
+function toStats(match: ApiJson, events: MatchEventVM[]): MatchStatsVM {
+  const home = emptyTeamStats();
+  const away = emptyTeamStats();
+  const homeTeamId = match.homeTeam?.id;
+  const awayTeamId = match.awayTeam?.id;
+  for (const event of events) {
+    if (event.teamId === homeTeamId) countEvent(home, event);
+    if (event.teamId === awayTeamId) countEvent(away, event);
+  }
+
+  const hasHalfTime =
+    match.score?.halfTime?.home != null && match.score?.halfTime?.away != null;
+
+  return {
+    halfTime: hasHalfTime
+      ? { home: match.score.halfTime.home, away: match.score.halfTime.away }
+      : null,
+    home,
+    away,
+  };
 }
 
 function shortGroup(group: string | null | undefined): string | null {
@@ -131,6 +202,7 @@ export function toMatches(json: ApiJson): MatchVM[] {
     const status = toStatus(m.status);
     const hasScore =
       m.score?.fullTime?.home != null && m.score?.fullTime?.away != null;
+    const events = toEvents(m);
     return {
       id: m.id,
       kickoff: m.utcDate,
@@ -144,7 +216,8 @@ export function toMatches(json: ApiJson): MatchVM[] {
       score: hasScore
         ? { home: m.score.fullTime.home, away: m.score.fullTime.away }
         : null,
-      events: toEvents(m),
+      events,
+      stats: toStats(m, events),
     };
   });
 }
@@ -217,6 +290,18 @@ export function mergeLiveOverlay(
       status: overlay.state === "in" ? "LIVE" : "FINISHED",
       minute: overlay.state === "in" ? overlay.minute : null,
       score: overlay.score ?? match.score,
+    };
+  });
+}
+
+export function settleExpiredMatches(matches: MatchVM[], now: number): MatchVM[] {
+  return matches.map((match) => {
+    if (match.status !== "UPCOMING") return match;
+    if (now - Date.parse(match.kickoff) < AUTO_FINISH_AFTER_MS) return match;
+    return {
+      ...match,
+      status: "FINISHED",
+      minute: null,
     };
   });
 }

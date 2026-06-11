@@ -11,7 +11,8 @@
     "staleNotice": "Flux interrompu — données de {time}",
     "mockNotice": "Mode démo — données simulées",
     "viewAll": "Tout voir",
-    "language": "Langue"
+    "language": "Langue",
+    "resultPending": "Résultat en attente"
   },
   "nav": {
     "home": "Direct",
@@ -24,6 +25,7 @@
   "home": {
     "title": "Tableau des scores en direct",
     "liveNow": "En cours",
+    "latestResults": "Derniers résultats",
     "todaysMatches": "Matchs du jour",
     "upcomingMatches": "Prochains matchs",
     "noMatchesToday": "Pas de match aujourd'hui — consultez le calendrier complet",
@@ -36,12 +38,20 @@
   },
   "match": {
     "timeline": "Fil du match",
+    "matchStats": "Stats du match",
     "noEvents": "Aucun événement pour l'instant",
     "goal": "But",
+    "goals": "Buts",
     "ownGoal": "But contre son camp",
     "penalty": "Penalty",
+    "penalties": "Penaltys",
+    "assist": "Passe",
     "yellowCard": "Carton jaune",
+    "yellowCards": "Cartons jaunes",
     "redCard": "Carton rouge",
+    "redCards": "Cartons rouges",
+    "totalCards": "Total cartons",
+    "halfTime": "Mi-temps",
     "halfTimeScore": "Mi-temps {score}",
     "notStarted": "Ce match n'a pas encore commencé",
     "stage": "Phase"
@@ -55,7 +65,8 @@
     "goalsFor": "BP",
     "goalsAgainst": "BC",
     "goalDifference": "Diff",
-    "points": "Pts"
+    "points": "Pts",
+    "results": "Résultats"
   },
   "bracket": {
     "title": "Tableau final",
