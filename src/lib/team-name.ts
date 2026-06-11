@@ -1,16 +1,17 @@
 // FIFA three-letter codes -> ISO 3166-1 alpha-2, so Intl.DisplayNames can
 // localize country names in every supported locale without manual catalogs.
 const TLA_TO_ISO2: Record<string, string> = {
-  ALG: "DZ", ARG: "AR", AUS: "AU", AUT: "AT", BEL: "BE", BOL: "BO",
-  BRA: "BR", CAN: "CA", CHI: "CL", CIV: "CI", CMR: "CM", COL: "CO",
-  CRC: "CR", CRO: "HR", CUW: "CW", DEN: "DK", ECU: "EC", EGY: "EG",
+  ALG: "DZ", ARG: "AR", AUS: "AU", AUT: "AT", BEL: "BE", BIH: "BA",
+  BOL: "BO", BRA: "BR", CAN: "CA", CHI: "CL", CIV: "CI", CMR: "CM",
+  COD: "CD", COL: "CO", CPV: "CV", CRC: "CR", CRO: "HR", CUW: "CW",
+  CZE: "CZ", DEN: "DK", ECU: "EC", EGY: "EG",
   ESP: "ES", FRA: "FR", GER: "DE", GHA: "GH", HAI: "HT", HON: "HN",
   IRN: "IR", IRQ: "IQ", ITA: "IT", JAM: "JM", JOR: "JO", JPN: "JP",
   KOR: "KR", KSA: "SA", MAR: "MA", MEX: "MX", NED: "NL", NGA: "NG",
   NOR: "NO", NZL: "NZ", PAN: "PA", PAR: "PY", PER: "PE", POL: "PL",
   POR: "PT", QAT: "QA", RSA: "ZA", RUS: "RU", SEN: "SN", SRB: "RS",
   SUI: "CH", SWE: "SE", TUN: "TN", TUR: "TR", UAE: "AE", UKR: "UA",
-  URU: "UY", USA: "US", UZB: "UZ", VEN: "VE",
+  URU: "UY", URY: "UY", USA: "US", UZB: "UZ", VEN: "VE",
 };
 
 export function isoFromTla(tla: string): string | undefined {

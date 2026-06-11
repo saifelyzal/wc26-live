@@ -1,0 +1,961 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "World Cup 26 Live" [ref=e4] [cursor=pointer]:
+        - /url: /en
+        - generic [ref=e5]: ⚽
+        - generic [ref=e6]: World Cup 26 Live
+      - navigation [ref=e7]:
+        - link "Live" [ref=e8] [cursor=pointer]:
+          - /url: /en
+        - link "Matches" [ref=e9] [cursor=pointer]:
+          - /url: /en/matches
+        - link "Groups" [ref=e10] [cursor=pointer]:
+          - /url: /en/groups
+        - link "Bracket" [ref=e11] [cursor=pointer]:
+          - /url: /en/bracket
+        - link "Stats" [ref=e12] [cursor=pointer]:
+          - /url: /en/stats
+        - link "History" [ref=e13] [cursor=pointer]:
+          - /url: /en/history
+      - group "Language" [ref=e14]:
+        - button "EN" [pressed] [ref=e15]
+        - button "ES" [ref=e16]
+        - button "FR" [ref=e17]
+        - button "ع" [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - heading "Match schedule" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Updated 23 seconds ago
+      - generic [ref=e24]:
+        - heading "Thursday, June 11" [level=2] [ref=e25]
+        - link "Group A 03:00 PM Mexico South Africa" [ref=e27] [cursor=pointer]:
+          - /url: /en/matches/537327
+          - generic [ref=e28]:
+            - generic [ref=e29]: Group A
+            - generic [ref=e30]: 03:00 PM
+          - generic [ref=e31]:
+            - generic [ref=e33]: Mexico
+            - generic [ref=e35]: South Africa
+      - generic [ref=e36]:
+        - heading "Friday, June 12" [level=2] [ref=e37]
+        - generic [ref=e38]:
+          - link "Group A 10:00 PM South Korea Czechia" [ref=e39] [cursor=pointer]:
+            - /url: /en/matches/537328
+            - generic [ref=e40]:
+              - generic [ref=e41]: Group A
+              - generic [ref=e42]: 10:00 PM
+            - generic [ref=e43]:
+              - generic [ref=e45]: South Korea
+              - generic [ref=e47]: Czechia
+          - link "Group B 03:00 PM Canada Bosnia & Herzegovina" [ref=e48] [cursor=pointer]:
+            - /url: /en/matches/537333
+            - generic [ref=e49]:
+              - generic [ref=e50]: Group B
+              - generic [ref=e51]: 03:00 PM
+            - generic [ref=e52]:
+              - generic [ref=e54]: Canada
+              - generic [ref=e56]: Bosnia & Herzegovina
+      - generic [ref=e57]:
+        - heading "Saturday, June 13" [level=2] [ref=e58]
+        - generic [ref=e59]:
+          - link "Group D 09:00 PM United States Paraguay" [ref=e60] [cursor=pointer]:
+            - /url: /en/matches/537345
+            - generic [ref=e61]:
+              - generic [ref=e62]: Group D
+              - generic [ref=e63]: 09:00 PM
+            - generic [ref=e64]:
+              - generic [ref=e66]: United States
+              - generic [ref=e68]: Paraguay
+          - link "Group B 03:00 PM Qatar Switzerland" [ref=e69] [cursor=pointer]:
+            - /url: /en/matches/537334
+            - generic [ref=e70]:
+              - generic [ref=e71]: Group B
+              - generic [ref=e72]: 03:00 PM
+            - generic [ref=e73]:
+              - generic [ref=e75]: Qatar
+              - generic [ref=e77]: Switzerland
+          - link "Group C 06:00 PM Brazil Morocco" [ref=e78] [cursor=pointer]:
+            - /url: /en/matches/537339
+            - generic [ref=e79]:
+              - generic [ref=e80]: Group C
+              - generic [ref=e81]: 06:00 PM
+            - generic [ref=e82]:
+              - generic [ref=e84]: Brazil
+              - generic [ref=e86]: Morocco
+      - generic [ref=e87]:
+        - heading "Sunday, June 14" [level=2] [ref=e88]
+        - generic [ref=e89]:
+          - link "Group C 09:00 PM Haiti Scotland" [ref=e90] [cursor=pointer]:
+            - /url: /en/matches/537340
+            - generic [ref=e91]:
+              - generic [ref=e92]: Group C
+              - generic [ref=e93]: 09:00 PM
+            - generic [ref=e94]:
+              - generic [ref=e96]: Haiti
+              - generic [ref=e98]: Scotland
+          - link "Group D 12:00 AM Australia Türkiye" [ref=e99] [cursor=pointer]:
+            - /url: /en/matches/537346
+            - generic [ref=e100]:
+              - generic [ref=e101]: Group D
+              - generic [ref=e102]: 12:00 AM
+            - generic [ref=e103]:
+              - generic [ref=e105]: Australia
+              - generic [ref=e107]: Türkiye
+          - link "Group E 01:00 PM Germany Curaçao" [ref=e108] [cursor=pointer]:
+            - /url: /en/matches/537351
+            - generic [ref=e109]:
+              - generic [ref=e110]: Group E
+              - generic [ref=e111]: 01:00 PM
+            - generic [ref=e112]:
+              - generic [ref=e114]: Germany
+              - generic [ref=e116]: Curaçao
+          - link "Group F 04:00 PM Netherlands Japan" [ref=e117] [cursor=pointer]:
+            - /url: /en/matches/537357
+            - generic [ref=e118]:
+              - generic [ref=e119]: Group F
+              - generic [ref=e120]: 04:00 PM
+            - generic [ref=e121]:
+              - generic [ref=e123]: Netherlands
+              - generic [ref=e125]: Japan
+          - link "Group E 07:00 PM Côte d’Ivoire Ecuador" [ref=e126] [cursor=pointer]:
+            - /url: /en/matches/537352
+            - generic [ref=e127]:
+              - generic [ref=e128]: Group E
+              - generic [ref=e129]: 07:00 PM
+            - generic [ref=e130]:
+              - generic [ref=e132]: Côte d’Ivoire
+              - generic [ref=e134]: Ecuador
+      - generic [ref=e135]:
+        - heading "Monday, June 15" [level=2] [ref=e136]
+        - generic [ref=e137]:
+          - link "Group F 10:00 PM Sweden Tunisia" [ref=e138] [cursor=pointer]:
+            - /url: /en/matches/537358
+            - generic [ref=e139]:
+              - generic [ref=e140]: Group F
+              - generic [ref=e141]: 10:00 PM
+            - generic [ref=e142]:
+              - generic [ref=e144]: Sweden
+              - generic [ref=e146]: Tunisia
+          - link "Group H 12:00 PM Spain Cape Verde" [ref=e147] [cursor=pointer]:
+            - /url: /en/matches/537369
+            - generic [ref=e148]:
+              - generic [ref=e149]: Group H
+              - generic [ref=e150]: 12:00 PM
+            - generic [ref=e151]:
+              - generic [ref=e153]: Spain
+              - generic [ref=e155]: Cape Verde
+          - link "Group G 03:00 PM Belgium Egypt" [ref=e156] [cursor=pointer]:
+            - /url: /en/matches/537363
+            - generic [ref=e157]:
+              - generic [ref=e158]: Group G
+              - generic [ref=e159]: 03:00 PM
+            - generic [ref=e160]:
+              - generic [ref=e162]: Belgium
+              - generic [ref=e164]: Egypt
+          - link "Group H 06:00 PM Saudi Arabia Uruguay" [ref=e165] [cursor=pointer]:
+            - /url: /en/matches/537370
+            - generic [ref=e166]:
+              - generic [ref=e167]: Group H
+              - generic [ref=e168]: 06:00 PM
+            - generic [ref=e169]:
+              - generic [ref=e171]: Saudi Arabia
+              - generic [ref=e173]: Uruguay
+      - generic [ref=e174]:
+        - heading "Tuesday, June 16" [level=2] [ref=e175]
+        - generic [ref=e176]:
+          - link "Group G 09:00 PM Iran New Zealand" [ref=e177] [cursor=pointer]:
+            - /url: /en/matches/537364
+            - generic [ref=e178]:
+              - generic [ref=e179]: Group G
+              - generic [ref=e180]: 09:00 PM
+            - generic [ref=e181]:
+              - generic [ref=e183]: Iran
+              - generic [ref=e185]: New Zealand
+          - link "Group I 03:00 PM France Senegal" [ref=e186] [cursor=pointer]:
+            - /url: /en/matches/537391
+            - generic [ref=e187]:
+              - generic [ref=e188]: Group I
+              - generic [ref=e189]: 03:00 PM
+            - generic [ref=e190]:
+              - generic [ref=e192]: France
+              - generic [ref=e194]: Senegal
+          - link "Group I 06:00 PM Iraq Norway" [ref=e195] [cursor=pointer]:
+            - /url: /en/matches/537392
+            - generic [ref=e196]:
+              - generic [ref=e197]: Group I
+              - generic [ref=e198]: 06:00 PM
+            - generic [ref=e199]:
+              - generic [ref=e201]: Iraq
+              - generic [ref=e203]: Norway
+      - generic [ref=e204]:
+        - heading "Wednesday, June 17" [level=2] [ref=e205]
+        - generic [ref=e206]:
+          - link "Group J 09:00 PM Argentina Algeria" [ref=e207] [cursor=pointer]:
+            - /url: /en/matches/537397
+            - generic [ref=e208]:
+              - generic [ref=e209]: Group J
+              - generic [ref=e210]: 09:00 PM
+            - generic [ref=e211]:
+              - generic [ref=e213]: Argentina
+              - generic [ref=e215]: Algeria
+          - link "Group J 12:00 AM Austria Jordan" [ref=e216] [cursor=pointer]:
+            - /url: /en/matches/537398
+            - generic [ref=e217]:
+              - generic [ref=e218]: Group J
+              - generic [ref=e219]: 12:00 AM
+            - generic [ref=e220]:
+              - generic [ref=e222]: Austria
+              - generic [ref=e224]: Jordan
+          - link "Group K 01:00 PM Portugal Congo - Kinshasa" [ref=e225] [cursor=pointer]:
+            - /url: /en/matches/537403
+            - generic [ref=e226]:
+              - generic [ref=e227]: Group K
+              - generic [ref=e228]: 01:00 PM
+            - generic [ref=e229]:
+              - generic [ref=e231]: Portugal
+              - generic [ref=e233]: Congo - Kinshasa
+          - link "Group L 04:00 PM England Croatia" [ref=e234] [cursor=pointer]:
+            - /url: /en/matches/537409
+            - generic [ref=e235]:
+              - generic [ref=e236]: Group L
+              - generic [ref=e237]: 04:00 PM
+            - generic [ref=e238]:
+              - generic [ref=e240]: England
+              - generic [ref=e242]: Croatia
+          - link "Group L 07:00 PM Ghana Panama" [ref=e243] [cursor=pointer]:
+            - /url: /en/matches/537410
+            - generic [ref=e244]:
+              - generic [ref=e245]: Group L
+              - generic [ref=e246]: 07:00 PM
+            - generic [ref=e247]:
+              - generic [ref=e249]: Ghana
+              - generic [ref=e251]: Panama
+      - generic [ref=e252]:
+        - heading "Thursday, June 18" [level=2] [ref=e253]
+        - generic [ref=e254]:
+          - link "Group K 10:00 PM Uzbekistan Colombia" [ref=e255] [cursor=pointer]:
+            - /url: /en/matches/537404
+            - generic [ref=e256]:
+              - generic [ref=e257]: Group K
+              - generic [ref=e258]: 10:00 PM
+            - generic [ref=e259]:
+              - generic [ref=e261]: Uzbekistan
+              - generic [ref=e263]: Colombia
+          - link "Group A 12:00 PM Czechia South Africa" [ref=e264] [cursor=pointer]:
+            - /url: /en/matches/537329
+            - generic [ref=e265]:
+              - generic [ref=e266]: Group A
+              - generic [ref=e267]: 12:00 PM
+            - generic [ref=e268]:
+              - generic [ref=e270]: Czechia
+              - generic [ref=e272]: South Africa
+          - link "Group B 03:00 PM Switzerland Bosnia & Herzegovina" [ref=e273] [cursor=pointer]:
+            - /url: /en/matches/537335
+            - generic [ref=e274]:
+              - generic [ref=e275]: Group B
+              - generic [ref=e276]: 03:00 PM
+            - generic [ref=e277]:
+              - generic [ref=e279]: Switzerland
+              - generic [ref=e281]: Bosnia & Herzegovina
+          - link "Group B 06:00 PM Canada Qatar" [ref=e282] [cursor=pointer]:
+            - /url: /en/matches/537336
+            - generic [ref=e283]:
+              - generic [ref=e284]: Group B
+              - generic [ref=e285]: 06:00 PM
+            - generic [ref=e286]:
+              - generic [ref=e288]: Canada
+              - generic [ref=e290]: Qatar
+      - generic [ref=e291]:
+        - heading "Friday, June 19" [level=2] [ref=e292]
+        - generic [ref=e293]:
+          - link "Group A 09:00 PM Mexico South Korea" [ref=e294] [cursor=pointer]:
+            - /url: /en/matches/537330
+            - generic [ref=e295]:
+              - generic [ref=e296]: Group A
+              - generic [ref=e297]: 09:00 PM
+            - generic [ref=e298]:
+              - generic [ref=e300]: Mexico
+              - generic [ref=e302]: South Korea
+          - link "Group D 03:00 PM United States Australia" [ref=e303] [cursor=pointer]:
+            - /url: /en/matches/537348
+            - generic [ref=e304]:
+              - generic [ref=e305]: Group D
+              - generic [ref=e306]: 03:00 PM
+            - generic [ref=e307]:
+              - generic [ref=e309]: United States
+              - generic [ref=e311]: Australia
+          - link "Group C 06:00 PM Scotland Morocco" [ref=e312] [cursor=pointer]:
+            - /url: /en/matches/537342
+            - generic [ref=e313]:
+              - generic [ref=e314]: Group C
+              - generic [ref=e315]: 06:00 PM
+            - generic [ref=e316]:
+              - generic [ref=e318]: Scotland
+              - generic [ref=e320]: Morocco
+      - generic [ref=e321]:
+        - heading "Saturday, June 20" [level=2] [ref=e322]
+        - generic [ref=e323]:
+          - link "Group C 08:30 PM Brazil Haiti" [ref=e324] [cursor=pointer]:
+            - /url: /en/matches/537341
+            - generic [ref=e325]:
+              - generic [ref=e326]: Group C
+              - generic [ref=e327]: 08:30 PM
+            - generic [ref=e328]:
+              - generic [ref=e330]: Brazil
+              - generic [ref=e332]: Haiti
+          - link "Group D 11:00 PM Türkiye Paraguay" [ref=e333] [cursor=pointer]:
+            - /url: /en/matches/537347
+            - generic [ref=e334]:
+              - generic [ref=e335]: Group D
+              - generic [ref=e336]: 11:00 PM
+            - generic [ref=e337]:
+              - generic [ref=e339]: Türkiye
+              - generic [ref=e341]: Paraguay
+          - link "Group F 01:00 PM Netherlands Sweden" [ref=e342] [cursor=pointer]:
+            - /url: /en/matches/537359
+            - generic [ref=e343]:
+              - generic [ref=e344]: Group F
+              - generic [ref=e345]: 01:00 PM
+            - generic [ref=e346]:
+              - generic [ref=e348]: Netherlands
+              - generic [ref=e350]: Sweden
+          - link "Group E 04:00 PM Germany Côte d’Ivoire" [ref=e351] [cursor=pointer]:
+            - /url: /en/matches/537353
+            - generic [ref=e352]:
+              - generic [ref=e353]: Group E
+              - generic [ref=e354]: 04:00 PM
+            - generic [ref=e355]:
+              - generic [ref=e357]: Germany
+              - generic [ref=e359]: Côte d’Ivoire
+      - generic [ref=e360]:
+        - heading "Sunday, June 21" [level=2] [ref=e361]
+        - generic [ref=e362]:
+          - link "Group E 08:00 PM Ecuador Curaçao" [ref=e363] [cursor=pointer]:
+            - /url: /en/matches/537354
+            - generic [ref=e364]:
+              - generic [ref=e365]: Group E
+              - generic [ref=e366]: 08:00 PM
+            - generic [ref=e367]:
+              - generic [ref=e369]: Ecuador
+              - generic [ref=e371]: Curaçao
+          - link "Group F 12:00 AM Tunisia Japan" [ref=e372] [cursor=pointer]:
+            - /url: /en/matches/537360
+            - generic [ref=e373]:
+              - generic [ref=e374]: Group F
+              - generic [ref=e375]: 12:00 AM
+            - generic [ref=e376]:
+              - generic [ref=e378]: Tunisia
+              - generic [ref=e380]: Japan
+          - link "Group H 12:00 PM Spain Saudi Arabia" [ref=e381] [cursor=pointer]:
+            - /url: /en/matches/537371
+            - generic [ref=e382]:
+              - generic [ref=e383]: Group H
+              - generic [ref=e384]: 12:00 PM
+            - generic [ref=e385]:
+              - generic [ref=e387]: Spain
+              - generic [ref=e389]: Saudi Arabia
+          - link "Group G 03:00 PM Belgium Iran" [ref=e390] [cursor=pointer]:
+            - /url: /en/matches/537365
+            - generic [ref=e391]:
+              - generic [ref=e392]: Group G
+              - generic [ref=e393]: 03:00 PM
+            - generic [ref=e394]:
+              - generic [ref=e396]: Belgium
+              - generic [ref=e398]: Iran
+          - link "Group H 06:00 PM Uruguay Cape Verde" [ref=e399] [cursor=pointer]:
+            - /url: /en/matches/537372
+            - generic [ref=e400]:
+              - generic [ref=e401]: Group H
+              - generic [ref=e402]: 06:00 PM
+            - generic [ref=e403]:
+              - generic [ref=e405]: Uruguay
+              - generic [ref=e407]: Cape Verde
+      - generic [ref=e408]:
+        - heading "Monday, June 22" [level=2] [ref=e409]
+        - generic [ref=e410]:
+          - link "Group G 09:00 PM New Zealand Egypt" [ref=e411] [cursor=pointer]:
+            - /url: /en/matches/537366
+            - generic [ref=e412]:
+              - generic [ref=e413]: Group G
+              - generic [ref=e414]: 09:00 PM
+            - generic [ref=e415]:
+              - generic [ref=e417]: New Zealand
+              - generic [ref=e419]: Egypt
+          - link "Group J 01:00 PM Argentina Austria" [ref=e420] [cursor=pointer]:
+            - /url: /en/matches/537399
+            - generic [ref=e421]:
+              - generic [ref=e422]: Group J
+              - generic [ref=e423]: 01:00 PM
+            - generic [ref=e424]:
+              - generic [ref=e426]: Argentina
+              - generic [ref=e428]: Austria
+          - link "Group I 05:00 PM France Iraq" [ref=e429] [cursor=pointer]:
+            - /url: /en/matches/537393
+            - generic [ref=e430]:
+              - generic [ref=e431]: Group I
+              - generic [ref=e432]: 05:00 PM
+            - generic [ref=e433]:
+              - generic [ref=e435]: France
+              - generic [ref=e437]: Iraq
+      - generic [ref=e438]:
+        - heading "Tuesday, June 23" [level=2] [ref=e439]
+        - generic [ref=e440]:
+          - link "Group I 08:00 PM Norway Senegal" [ref=e441] [cursor=pointer]:
+            - /url: /en/matches/537394
+            - generic [ref=e442]:
+              - generic [ref=e443]: Group I
+              - generic [ref=e444]: 08:00 PM
+            - generic [ref=e445]:
+              - generic [ref=e447]: Norway
+              - generic [ref=e449]: Senegal
+          - link "Group J 11:00 PM Jordan Algeria" [ref=e450] [cursor=pointer]:
+            - /url: /en/matches/537400
+            - generic [ref=e451]:
+              - generic [ref=e452]: Group J
+              - generic [ref=e453]: 11:00 PM
+            - generic [ref=e454]:
+              - generic [ref=e456]: Jordan
+              - generic [ref=e458]: Algeria
+          - link "Group K 01:00 PM Portugal Uzbekistan" [ref=e459] [cursor=pointer]:
+            - /url: /en/matches/537405
+            - generic [ref=e460]:
+              - generic [ref=e461]: Group K
+              - generic [ref=e462]: 01:00 PM
+            - generic [ref=e463]:
+              - generic [ref=e465]: Portugal
+              - generic [ref=e467]: Uzbekistan
+          - link "Group L 04:00 PM England Ghana" [ref=e468] [cursor=pointer]:
+            - /url: /en/matches/537411
+            - generic [ref=e469]:
+              - generic [ref=e470]: Group L
+              - generic [ref=e471]: 04:00 PM
+            - generic [ref=e472]:
+              - generic [ref=e474]: England
+              - generic [ref=e476]: Ghana
+          - link "Group L 07:00 PM Panama Croatia" [ref=e477] [cursor=pointer]:
+            - /url: /en/matches/537412
+            - generic [ref=e478]:
+              - generic [ref=e479]: Group L
+              - generic [ref=e480]: 07:00 PM
+            - generic [ref=e481]:
+              - generic [ref=e483]: Panama
+              - generic [ref=e485]: Croatia
+      - generic [ref=e486]:
+        - heading "Wednesday, June 24" [level=2] [ref=e487]
+        - generic [ref=e488]:
+          - link "Group K 10:00 PM Colombia Congo - Kinshasa" [ref=e489] [cursor=pointer]:
+            - /url: /en/matches/537406
+            - generic [ref=e490]:
+              - generic [ref=e491]: Group K
+              - generic [ref=e492]: 10:00 PM
+            - generic [ref=e493]:
+              - generic [ref=e495]: Colombia
+              - generic [ref=e497]: Congo - Kinshasa
+          - link "Group B 03:00 PM Switzerland Canada" [ref=e498] [cursor=pointer]:
+            - /url: /en/matches/537337
+            - generic [ref=e499]:
+              - generic [ref=e500]: Group B
+              - generic [ref=e501]: 03:00 PM
+            - generic [ref=e502]:
+              - generic [ref=e504]: Switzerland
+              - generic [ref=e506]: Canada
+          - link "Group B 03:00 PM Bosnia & Herzegovina Qatar" [ref=e507] [cursor=pointer]:
+            - /url: /en/matches/537338
+            - generic [ref=e508]:
+              - generic [ref=e509]: Group B
+              - generic [ref=e510]: 03:00 PM
+            - generic [ref=e511]:
+              - generic [ref=e513]: Bosnia & Herzegovina
+              - generic [ref=e515]: Qatar
+          - link "Group C 06:00 PM Morocco Haiti" [ref=e516] [cursor=pointer]:
+            - /url: /en/matches/537344
+            - generic [ref=e517]:
+              - generic [ref=e518]: Group C
+              - generic [ref=e519]: 06:00 PM
+            - generic [ref=e520]:
+              - generic [ref=e522]: Morocco
+              - generic [ref=e524]: Haiti
+          - link "Group C 06:00 PM Scotland Brazil" [ref=e525] [cursor=pointer]:
+            - /url: /en/matches/537343
+            - generic [ref=e526]:
+              - generic [ref=e527]: Group C
+              - generic [ref=e528]: 06:00 PM
+            - generic [ref=e529]:
+              - generic [ref=e531]: Scotland
+              - generic [ref=e533]: Brazil
+      - generic [ref=e534]:
+        - heading "Thursday, June 25" [level=2] [ref=e535]
+        - generic [ref=e536]:
+          - link "Group A 09:00 PM Czechia Mexico" [ref=e537] [cursor=pointer]:
+            - /url: /en/matches/537331
+            - generic [ref=e538]:
+              - generic [ref=e539]: Group A
+              - generic [ref=e540]: 09:00 PM
+            - generic [ref=e541]:
+              - generic [ref=e543]: Czechia
+              - generic [ref=e545]: Mexico
+          - link "Group A 09:00 PM South Africa South Korea" [ref=e546] [cursor=pointer]:
+            - /url: /en/matches/537332
+            - generic [ref=e547]:
+              - generic [ref=e548]: Group A
+              - generic [ref=e549]: 09:00 PM
+            - generic [ref=e550]:
+              - generic [ref=e552]: South Africa
+              - generic [ref=e554]: South Korea
+          - link "Group E 04:00 PM Ecuador Germany" [ref=e555] [cursor=pointer]:
+            - /url: /en/matches/537355
+            - generic [ref=e556]:
+              - generic [ref=e557]: Group E
+              - generic [ref=e558]: 04:00 PM
+            - generic [ref=e559]:
+              - generic [ref=e561]: Ecuador
+              - generic [ref=e563]: Germany
+          - link "Group E 04:00 PM Curaçao Côte d’Ivoire" [ref=e564] [cursor=pointer]:
+            - /url: /en/matches/537356
+            - generic [ref=e565]:
+              - generic [ref=e566]: Group E
+              - generic [ref=e567]: 04:00 PM
+            - generic [ref=e568]:
+              - generic [ref=e570]: Curaçao
+              - generic [ref=e572]: Côte d’Ivoire
+          - link "Group F 07:00 PM Tunisia Netherlands" [ref=e573] [cursor=pointer]:
+            - /url: /en/matches/537361
+            - generic [ref=e574]:
+              - generic [ref=e575]: Group F
+              - generic [ref=e576]: 07:00 PM
+            - generic [ref=e577]:
+              - generic [ref=e579]: Tunisia
+              - generic [ref=e581]: Netherlands
+          - link "Group F 07:00 PM Japan Sweden" [ref=e582] [cursor=pointer]:
+            - /url: /en/matches/537362
+            - generic [ref=e583]:
+              - generic [ref=e584]: Group F
+              - generic [ref=e585]: 07:00 PM
+            - generic [ref=e586]:
+              - generic [ref=e588]: Japan
+              - generic [ref=e590]: Sweden
+      - generic [ref=e591]:
+        - heading "Friday, June 26" [level=2] [ref=e592]
+        - generic [ref=e593]:
+          - link "Group D 10:00 PM Türkiye United States" [ref=e594] [cursor=pointer]:
+            - /url: /en/matches/537349
+            - generic [ref=e595]:
+              - generic [ref=e596]: Group D
+              - generic [ref=e597]: 10:00 PM
+            - generic [ref=e598]:
+              - generic [ref=e600]: Türkiye
+              - generic [ref=e602]: United States
+          - link "Group D 10:00 PM Paraguay Australia" [ref=e603] [cursor=pointer]:
+            - /url: /en/matches/537350
+            - generic [ref=e604]:
+              - generic [ref=e605]: Group D
+              - generic [ref=e606]: 10:00 PM
+            - generic [ref=e607]:
+              - generic [ref=e609]: Paraguay
+              - generic [ref=e611]: Australia
+          - link "Group I 03:00 PM Norway France" [ref=e612] [cursor=pointer]:
+            - /url: /en/matches/537395
+            - generic [ref=e613]:
+              - generic [ref=e614]: Group I
+              - generic [ref=e615]: 03:00 PM
+            - generic [ref=e616]:
+              - generic [ref=e618]: Norway
+              - generic [ref=e620]: France
+          - link "Group I 03:00 PM Senegal Iraq" [ref=e621] [cursor=pointer]:
+            - /url: /en/matches/537396
+            - generic [ref=e622]:
+              - generic [ref=e623]: Group I
+              - generic [ref=e624]: 03:00 PM
+            - generic [ref=e625]:
+              - generic [ref=e627]: Senegal
+              - generic [ref=e629]: Iraq
+      - generic [ref=e630]:
+        - heading "Saturday, June 27" [level=2] [ref=e631]
+        - generic [ref=e632]:
+          - link "Group H 08:00 PM Uruguay Spain" [ref=e633] [cursor=pointer]:
+            - /url: /en/matches/537373
+            - generic [ref=e634]:
+              - generic [ref=e635]: Group H
+              - generic [ref=e636]: 08:00 PM
+            - generic [ref=e637]:
+              - generic [ref=e639]: Uruguay
+              - generic [ref=e641]: Spain
+          - link "Group H 08:00 PM Cape Verde Saudi Arabia" [ref=e642] [cursor=pointer]:
+            - /url: /en/matches/537374
+            - generic [ref=e643]:
+              - generic [ref=e644]: Group H
+              - generic [ref=e645]: 08:00 PM
+            - generic [ref=e646]:
+              - generic [ref=e648]: Cape Verde
+              - generic [ref=e650]: Saudi Arabia
+          - link "Group G 11:00 PM New Zealand Belgium" [ref=e651] [cursor=pointer]:
+            - /url: /en/matches/537367
+            - generic [ref=e652]:
+              - generic [ref=e653]: Group G
+              - generic [ref=e654]: 11:00 PM
+            - generic [ref=e655]:
+              - generic [ref=e657]: New Zealand
+              - generic [ref=e659]: Belgium
+          - link "Group G 11:00 PM Egypt Iran" [ref=e660] [cursor=pointer]:
+            - /url: /en/matches/537368
+            - generic [ref=e661]:
+              - generic [ref=e662]: Group G
+              - generic [ref=e663]: 11:00 PM
+            - generic [ref=e664]:
+              - generic [ref=e666]: Egypt
+              - generic [ref=e668]: Iran
+          - link "Group L 05:00 PM Panama England" [ref=e669] [cursor=pointer]:
+            - /url: /en/matches/537413
+            - generic [ref=e670]:
+              - generic [ref=e671]: Group L
+              - generic [ref=e672]: 05:00 PM
+            - generic [ref=e673]:
+              - generic [ref=e675]: Panama
+              - generic [ref=e677]: England
+          - link "Group L 05:00 PM Croatia Ghana" [ref=e678] [cursor=pointer]:
+            - /url: /en/matches/537414
+            - generic [ref=e679]:
+              - generic [ref=e680]: Group L
+              - generic [ref=e681]: 05:00 PM
+            - generic [ref=e682]:
+              - generic [ref=e684]: Croatia
+              - generic [ref=e686]: Ghana
+          - link "Group K 07:30 PM Colombia Portugal" [ref=e687] [cursor=pointer]:
+            - /url: /en/matches/537407
+            - generic [ref=e688]:
+              - generic [ref=e689]: Group K
+              - generic [ref=e690]: 07:30 PM
+            - generic [ref=e691]:
+              - generic [ref=e693]: Colombia
+              - generic [ref=e695]: Portugal
+          - link "Group K 07:30 PM Congo - Kinshasa Uzbekistan" [ref=e696] [cursor=pointer]:
+            - /url: /en/matches/537408
+            - generic [ref=e697]:
+              - generic [ref=e698]: Group K
+              - generic [ref=e699]: 07:30 PM
+            - generic [ref=e700]:
+              - generic [ref=e702]: Congo - Kinshasa
+              - generic [ref=e704]: Uzbekistan
+      - generic [ref=e705]:
+        - heading "Sunday, June 28" [level=2] [ref=e706]
+        - generic [ref=e707]:
+          - link "Group J 10:00 PM Jordan Argentina" [ref=e708] [cursor=pointer]:
+            - /url: /en/matches/537401
+            - generic [ref=e709]:
+              - generic [ref=e710]: Group J
+              - generic [ref=e711]: 10:00 PM
+            - generic [ref=e712]:
+              - generic [ref=e714]: Jordan
+              - generic [ref=e716]: Argentina
+          - link "Group J 10:00 PM Algeria Austria" [ref=e717] [cursor=pointer]:
+            - /url: /en/matches/537402
+            - generic [ref=e718]:
+              - generic [ref=e719]: Group J
+              - generic [ref=e720]: 10:00 PM
+            - generic [ref=e721]:
+              - generic [ref=e723]: Algeria
+              - generic [ref=e725]: Austria
+          - link "Round of 32 03:00 PM" [ref=e726] [cursor=pointer]:
+            - /url: /en/matches/537417
+            - generic [ref=e727]:
+              - generic [ref=e728]: Round of 32
+              - generic [ref=e729]: 03:00 PM
+            - generic [ref=e730]:
+              - generic [ref=e732]: 🏳️
+              - generic [ref=e734]: 🏳️
+      - generic [ref=e735]:
+        - heading "Monday, June 29" [level=2] [ref=e736]
+        - generic [ref=e737]:
+          - link "Round of 32 01:00 PM" [ref=e738] [cursor=pointer]:
+            - /url: /en/matches/537423
+            - generic [ref=e739]:
+              - generic [ref=e740]: Round of 32
+              - generic [ref=e741]: 01:00 PM
+            - generic [ref=e742]:
+              - generic [ref=e744]: 🏳️
+              - generic [ref=e746]: 🏳️
+          - link "Round of 32 04:30 PM" [ref=e747] [cursor=pointer]:
+            - /url: /en/matches/537415
+            - generic [ref=e748]:
+              - generic [ref=e749]: Round of 32
+              - generic [ref=e750]: 04:30 PM
+            - generic [ref=e751]:
+              - generic [ref=e753]: 🏳️
+              - generic [ref=e755]: 🏳️
+      - generic [ref=e756]:
+        - heading "Tuesday, June 30" [level=2] [ref=e757]
+        - generic [ref=e758]:
+          - link "Round of 32 09:00 PM" [ref=e759] [cursor=pointer]:
+            - /url: /en/matches/537418
+            - generic [ref=e760]:
+              - generic [ref=e761]: Round of 32
+              - generic [ref=e762]: 09:00 PM
+            - generic [ref=e763]:
+              - generic [ref=e765]: 🏳️
+              - generic [ref=e767]: 🏳️
+          - link "Round of 32 01:00 PM" [ref=e768] [cursor=pointer]:
+            - /url: /en/matches/537424
+            - generic [ref=e769]:
+              - generic [ref=e770]: Round of 32
+              - generic [ref=e771]: 01:00 PM
+            - generic [ref=e772]:
+              - generic [ref=e774]: 🏳️
+              - generic [ref=e776]: 🏳️
+          - link "Round of 32 05:00 PM" [ref=e777] [cursor=pointer]:
+            - /url: /en/matches/537416
+            - generic [ref=e778]:
+              - generic [ref=e779]: Round of 32
+              - generic [ref=e780]: 05:00 PM
+            - generic [ref=e781]:
+              - generic [ref=e783]: 🏳️
+              - generic [ref=e785]: 🏳️
+      - generic [ref=e786]:
+        - heading "Wednesday, July 1" [level=2] [ref=e787]
+        - generic [ref=e788]:
+          - link "Round of 32 09:00 PM" [ref=e789] [cursor=pointer]:
+            - /url: /en/matches/537425
+            - generic [ref=e790]:
+              - generic [ref=e791]: Round of 32
+              - generic [ref=e792]: 09:00 PM
+            - generic [ref=e793]:
+              - generic [ref=e795]: 🏳️
+              - generic [ref=e797]: 🏳️
+          - link "Round of 32 12:00 PM" [ref=e798] [cursor=pointer]:
+            - /url: /en/matches/537426
+            - generic [ref=e799]:
+              - generic [ref=e800]: Round of 32
+              - generic [ref=e801]: 12:00 PM
+            - generic [ref=e802]:
+              - generic [ref=e804]: 🏳️
+              - generic [ref=e806]: 🏳️
+          - link "Round of 32 04:00 PM" [ref=e807] [cursor=pointer]:
+            - /url: /en/matches/537422
+            - generic [ref=e808]:
+              - generic [ref=e809]: Round of 32
+              - generic [ref=e810]: 04:00 PM
+            - generic [ref=e811]:
+              - generic [ref=e813]: 🏳️
+              - generic [ref=e815]: 🏳️
+      - generic [ref=e816]:
+        - heading "Thursday, July 2" [level=2] [ref=e817]
+        - generic [ref=e818]:
+          - link "Round of 32 08:00 PM" [ref=e819] [cursor=pointer]:
+            - /url: /en/matches/537421
+            - generic [ref=e820]:
+              - generic [ref=e821]: Round of 32
+              - generic [ref=e822]: 08:00 PM
+            - generic [ref=e823]:
+              - generic [ref=e825]: 🏳️
+              - generic [ref=e827]: 🏳️
+          - link "Round of 32 03:00 PM" [ref=e828] [cursor=pointer]:
+            - /url: /en/matches/537420
+            - generic [ref=e829]:
+              - generic [ref=e830]: Round of 32
+              - generic [ref=e831]: 03:00 PM
+            - generic [ref=e832]:
+              - generic [ref=e834]: 🏳️
+              - generic [ref=e836]: 🏳️
+          - link "Round of 32 07:00 PM" [ref=e837] [cursor=pointer]:
+            - /url: /en/matches/537419
+            - generic [ref=e838]:
+              - generic [ref=e839]: Round of 32
+              - generic [ref=e840]: 07:00 PM
+            - generic [ref=e841]:
+              - generic [ref=e843]: 🏳️
+              - generic [ref=e845]: 🏳️
+      - generic [ref=e846]:
+        - heading "Friday, July 3" [level=2] [ref=e847]
+        - generic [ref=e848]:
+          - link "Round of 32 11:00 PM" [ref=e849] [cursor=pointer]:
+            - /url: /en/matches/537429
+            - generic [ref=e850]:
+              - generic [ref=e851]: Round of 32
+              - generic [ref=e852]: 11:00 PM
+            - generic [ref=e853]:
+              - generic [ref=e855]: 🏳️
+              - generic [ref=e857]: 🏳️
+          - link "Round of 32 02:00 PM" [ref=e858] [cursor=pointer]:
+            - /url: /en/matches/537428
+            - generic [ref=e859]:
+              - generic [ref=e860]: Round of 32
+              - generic [ref=e861]: 02:00 PM
+            - generic [ref=e862]:
+              - generic [ref=e864]: 🏳️
+              - generic [ref=e866]: 🏳️
+          - link "Round of 32 06:00 PM" [ref=e867] [cursor=pointer]:
+            - /url: /en/matches/537427
+            - generic [ref=e868]:
+              - generic [ref=e869]: Round of 32
+              - generic [ref=e870]: 06:00 PM
+            - generic [ref=e871]:
+              - generic [ref=e873]: 🏳️
+              - generic [ref=e875]: 🏳️
+      - generic [ref=e876]:
+        - heading "Saturday, July 4" [level=2] [ref=e877]
+        - generic [ref=e878]:
+          - link "Round of 32 09:30 PM" [ref=e879] [cursor=pointer]:
+            - /url: /en/matches/537430
+            - generic [ref=e880]:
+              - generic [ref=e881]: Round of 32
+              - generic [ref=e882]: 09:30 PM
+            - generic [ref=e883]:
+              - generic [ref=e885]: 🏳️
+              - generic [ref=e887]: 🏳️
+          - link "Round of 16 01:00 PM" [ref=e888] [cursor=pointer]:
+            - /url: /en/matches/537376
+            - generic [ref=e889]:
+              - generic [ref=e890]: Round of 16
+              - generic [ref=e891]: 01:00 PM
+            - generic [ref=e892]:
+              - generic [ref=e894]: 🏳️
+              - generic [ref=e896]: 🏳️
+          - link "Round of 16 05:00 PM" [ref=e897] [cursor=pointer]:
+            - /url: /en/matches/537375
+            - generic [ref=e898]:
+              - generic [ref=e899]: Round of 16
+              - generic [ref=e900]: 05:00 PM
+            - generic [ref=e901]:
+              - generic [ref=e903]: 🏳️
+              - generic [ref=e905]: 🏳️
+      - generic [ref=e906]:
+        - heading "Sunday, July 5" [level=2] [ref=e907]
+        - link "Round of 16 04:00 PM" [ref=e909] [cursor=pointer]:
+          - /url: /en/matches/537377
+          - generic [ref=e910]:
+            - generic [ref=e911]: Round of 16
+            - generic [ref=e912]: 04:00 PM
+          - generic [ref=e913]:
+            - generic [ref=e915]: 🏳️
+            - generic [ref=e917]: 🏳️
+      - generic [ref=e918]:
+        - heading "Monday, July 6" [level=2] [ref=e919]
+        - generic [ref=e920]:
+          - link "Round of 16 08:00 PM" [ref=e921] [cursor=pointer]:
+            - /url: /en/matches/537378
+            - generic [ref=e922]:
+              - generic [ref=e923]: Round of 16
+              - generic [ref=e924]: 08:00 PM
+            - generic [ref=e925]:
+              - generic [ref=e927]: 🏳️
+              - generic [ref=e929]: 🏳️
+          - link "Round of 16 03:00 PM" [ref=e930] [cursor=pointer]:
+            - /url: /en/matches/537379
+            - generic [ref=e931]:
+              - generic [ref=e932]: Round of 16
+              - generic [ref=e933]: 03:00 PM
+            - generic [ref=e934]:
+              - generic [ref=e936]: 🏳️
+              - generic [ref=e938]: 🏳️
+      - generic [ref=e939]:
+        - heading "Tuesday, July 7" [level=2] [ref=e940]
+        - generic [ref=e941]:
+          - link "Round of 16 08:00 PM" [ref=e942] [cursor=pointer]:
+            - /url: /en/matches/537380
+            - generic [ref=e943]:
+              - generic [ref=e944]: Round of 16
+              - generic [ref=e945]: 08:00 PM
+            - generic [ref=e946]:
+              - generic [ref=e948]: 🏳️
+              - generic [ref=e950]: 🏳️
+          - link "Round of 16 12:00 PM" [ref=e951] [cursor=pointer]:
+            - /url: /en/matches/537381
+            - generic [ref=e952]:
+              - generic [ref=e953]: Round of 16
+              - generic [ref=e954]: 12:00 PM
+            - generic [ref=e955]:
+              - generic [ref=e957]: 🏳️
+              - generic [ref=e959]: 🏳️
+          - link "Round of 16 04:00 PM" [ref=e960] [cursor=pointer]:
+            - /url: /en/matches/537382
+            - generic [ref=e961]:
+              - generic [ref=e962]: Round of 16
+              - generic [ref=e963]: 04:00 PM
+            - generic [ref=e964]:
+              - generic [ref=e966]: 🏳️
+              - generic [ref=e968]: 🏳️
+      - generic [ref=e969]:
+        - heading "Thursday, July 9" [level=2] [ref=e970]
+        - link "Quarter-finals 04:00 PM" [ref=e972] [cursor=pointer]:
+          - /url: /en/matches/537383
+          - generic [ref=e973]:
+            - generic [ref=e974]: Quarter-finals
+            - generic [ref=e975]: 04:00 PM
+          - generic [ref=e976]:
+            - generic [ref=e978]: 🏳️
+            - generic [ref=e980]: 🏳️
+      - generic [ref=e981]:
+        - heading "Friday, July 10" [level=2] [ref=e982]
+        - link "Quarter-finals 03:00 PM" [ref=e984] [cursor=pointer]:
+          - /url: /en/matches/537384
+          - generic [ref=e985]:
+            - generic [ref=e986]: Quarter-finals
+            - generic [ref=e987]: 03:00 PM
+          - generic [ref=e988]:
+            - generic [ref=e990]: 🏳️
+            - generic [ref=e992]: 🏳️
+      - generic [ref=e993]:
+        - heading "Saturday, July 11" [level=2] [ref=e994]
+        - link "Quarter-finals 05:00 PM" [ref=e996] [cursor=pointer]:
+          - /url: /en/matches/537385
+          - generic [ref=e997]:
+            - generic [ref=e998]: Quarter-finals
+            - generic [ref=e999]: 05:00 PM
+          - generic [ref=e1000]:
+            - generic [ref=e1002]: 🏳️
+            - generic [ref=e1004]: 🏳️
+      - generic [ref=e1005]:
+        - heading "Sunday, July 12" [level=2] [ref=e1006]
+        - link "Quarter-finals 09:00 PM" [ref=e1008] [cursor=pointer]:
+          - /url: /en/matches/537386
+          - generic [ref=e1009]:
+            - generic [ref=e1010]: Quarter-finals
+            - generic [ref=e1011]: 09:00 PM
+          - generic [ref=e1012]:
+            - generic [ref=e1014]: 🏳️
+            - generic [ref=e1016]: 🏳️
+      - generic [ref=e1017]:
+        - heading "Tuesday, July 14" [level=2] [ref=e1018]
+        - link "Semi-finals 03:00 PM" [ref=e1020] [cursor=pointer]:
+          - /url: /en/matches/537387
+          - generic [ref=e1021]:
+            - generic [ref=e1022]: Semi-finals
+            - generic [ref=e1023]: 03:00 PM
+          - generic [ref=e1024]:
+            - generic [ref=e1026]: 🏳️
+            - generic [ref=e1028]: 🏳️
+      - generic [ref=e1029]:
+        - heading "Wednesday, July 15" [level=2] [ref=e1030]
+        - link "Semi-finals 03:00 PM" [ref=e1032] [cursor=pointer]:
+          - /url: /en/matches/537388
+          - generic [ref=e1033]:
+            - generic [ref=e1034]: Semi-finals
+            - generic [ref=e1035]: 03:00 PM
+          - generic [ref=e1036]:
+            - generic [ref=e1038]: 🏳️
+            - generic [ref=e1040]: 🏳️
+      - generic [ref=e1041]:
+        - heading "Saturday, July 18" [level=2] [ref=e1042]
+        - link "Third place 05:00 PM" [ref=e1044] [cursor=pointer]:
+          - /url: /en/matches/537389
+          - generic [ref=e1045]:
+            - generic [ref=e1046]: Third place
+            - generic [ref=e1047]: 05:00 PM
+          - generic [ref=e1048]:
+            - generic [ref=e1050]: 🏳️
+            - generic [ref=e1052]: 🏳️
+      - generic [ref=e1053]:
+        - heading "Sunday, July 19" [level=2] [ref=e1054]
+        - link "Final 03:00 PM" [ref=e1056] [cursor=pointer]:
+          - /url: /en/matches/537390
+          - generic [ref=e1057]:
+            - generic [ref=e1058]: Final
+            - generic [ref=e1059]: 03:00 PM
+          - generic [ref=e1060]:
+            - generic [ref=e1062]: 🏳️
+            - generic [ref=e1064]: 🏳️
+  - contentinfo [ref=e1065]: World Cup 26 · football-data.org
+  - button "Open Next.js Dev Tools" [ref=e1071] [cursor=pointer]:
+    - img [ref=e1072]
+  - alert [ref=e1075]
