@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { teamName } from "@/lib/team-name";
+import { useDisplayTimeZone } from "@/lib/use-display-timezone";
 import type { MatchVM, TeamVM } from "@/lib/transformers";
 import { TeamBadge } from "./team-badge";
 
@@ -63,6 +64,7 @@ function TeamRow({
 export function MatchStatusBadge({ match }: { match: MatchVM }) {
   const t = useTranslations("common");
   const format = useFormatter();
+  const timeZone = useDisplayTimeZone();
 
   if (match.status === "LIVE") {
     return (
@@ -87,6 +89,7 @@ export function MatchStatusBadge({ match }: { match: MatchVM }) {
       {format.dateTime(new Date(match.kickoff), {
         hour: "2-digit",
         minute: "2-digit",
+        timeZone,
       })}
     </span>
   );

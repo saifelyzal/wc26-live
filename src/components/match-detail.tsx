@@ -2,6 +2,7 @@
 
 import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { teamName } from "@/lib/team-name";
+import { useDisplayTimeZone } from "@/lib/use-display-timezone";
 import { useLiveMatches, type LiveMatchesState } from "@/lib/use-live-matches";
 import type { MatchEventVM, MatchVM } from "@/lib/transformers";
 import { MatchStatusBadge } from "./match-card";
@@ -61,6 +62,7 @@ export function MatchDetail({
   const tc = useTranslations("common");
   const tStages = useTranslations("stages");
   const format = useFormatter();
+  const timeZone = useDisplayTimeZone();
   const state = useLiveMatches(initial);
 
   const match =
@@ -99,6 +101,7 @@ export function MatchDetail({
                 {format.dateTime(new Date(match.kickoff), {
                   hour: "2-digit",
                   minute: "2-digit",
+                  timeZone,
                 })}
               </div>
             )}
@@ -107,6 +110,7 @@ export function MatchDetail({
                 {format.dateTime(new Date(match.kickoff), {
                   month: "short",
                   day: "numeric",
+                  timeZone,
                 })}
               </p>
             )}

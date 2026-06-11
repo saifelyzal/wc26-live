@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { dayKey, useDisplayTimeZone } from "@/lib/use-display-timezone";
 import { useLiveMatches, type LiveMatchesState } from "@/lib/use-live-matches";
 import type { GroupVM, ScorerVM } from "@/lib/transformers";
 import { MatchCard } from "./match-card";
@@ -32,13 +33,12 @@ export function HomeDashboard({
   const tc = useTranslations("common");
   const state = useLiveMatches(initial);
 
-  // Same fixed zone as the i18n formatter, so SSR and client agree on "today".
-  const dayInET = (date: Date) =>
-    date.toLocaleDateString("en-US", { timeZone: "America/New_York" });
+  const timeZone = useDisplayTimeZone();
   const live = state.matches.filter((m) => m.status === "LIVE");
-  const today = dayInET(new Date());
+  const today = dayKey(new Date(), timeZone);
   const todays = state.matches.filter(
-    (m) => dayInET(new Date(m.kickoff)) === today && m.status !== "LIVE",
+    (m) =>
+      dayKey(new Date(m.kickoff), timeZone) === today && m.status !== "LIVE",
   );
   const upcoming = state.matches
     .filter((m) => m.status === "UPCOMING")

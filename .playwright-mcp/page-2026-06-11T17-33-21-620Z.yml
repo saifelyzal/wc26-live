@@ -1,0 +1,145 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "World Cup 26 Live" [ref=e4] [cursor=pointer]:
+        - /url: /en
+        - generic [ref=e5]: ⚽
+        - generic [ref=e6]: World Cup 26 Live
+      - navigation [ref=e7]:
+        - link "Live" [ref=e8] [cursor=pointer]:
+          - /url: /en
+        - link "Matches" [ref=e9] [cursor=pointer]:
+          - /url: /en/matches
+        - link "Groups" [ref=e10] [cursor=pointer]:
+          - /url: /en/groups
+        - link "Bracket" [ref=e11] [cursor=pointer]:
+          - /url: /en/bracket
+        - link "Stats" [ref=e12] [cursor=pointer]:
+          - /url: /en/stats
+        - link "History" [ref=e13] [cursor=pointer]:
+          - /url: /en/history
+      - group "Language" [ref=e14]:
+        - button "EN" [pressed] [ref=e15]
+        - button "ES" [ref=e16]
+        - button "FR" [ref=e17]
+        - button "ع" [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - heading "Live scoreboard" [level=1] [ref=e22]
+        - paragraph [ref=e24]: Updated 2 minutes ago
+      - generic [ref=e25]:
+        - heading "Today's matches" [level=2] [ref=e26]
+        - generic [ref=e27]:
+          - link "Group A 03:00 PM Mexico South Africa" [ref=e28] [cursor=pointer]:
+            - /url: /en/matches/537327
+            - generic [ref=e29]:
+              - generic [ref=e30]: Group A
+              - generic [ref=e31]: 03:00 PM
+            - generic [ref=e32]:
+              - generic [ref=e34]: Mexico
+              - generic [ref=e36]: South Africa
+          - link "Group A 10:00 PM South Korea Czechia" [ref=e37] [cursor=pointer]:
+            - /url: /en/matches/537328
+            - generic [ref=e38]:
+              - generic [ref=e39]: Group A
+              - generic [ref=e40]: 10:00 PM
+            - generic [ref=e41]:
+              - generic [ref=e43]: South Korea
+              - generic [ref=e45]: Czechia
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - heading "Group standings" [level=2] [ref=e49]
+            - link "View all →" [ref=e50] [cursor=pointer]:
+              - /url: /en/groups
+              - text: View all
+              - generic [ref=e51]: →
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - heading "Group Group A" [level=3] [ref=e55]
+              - table [ref=e56]:
+                - rowgroup [ref=e57]:
+                  - row "P GD Pts" [ref=e58]:
+                    - columnheader [ref=e59]
+                    - columnheader "P" [ref=e60]
+                    - columnheader "GD" [ref=e61]
+                    - columnheader "Pts" [ref=e62]
+                - rowgroup [ref=e63]:
+                  - row "1 Czechia 0 0 0" [ref=e64]:
+                    - cell "1" [ref=e65]
+                    - cell "Czechia" [ref=e66]:
+                      - generic [ref=e68]: Czechia
+                    - cell "0" [ref=e69]
+                    - cell "0" [ref=e70]
+                    - cell "0" [ref=e71]
+                  - row "2 Mexico 0 0 0" [ref=e72]:
+                    - cell "2" [ref=e73]
+                    - cell "Mexico" [ref=e74]:
+                      - generic [ref=e76]: Mexico
+                    - cell "0" [ref=e77]
+                    - cell "0" [ref=e78]
+                    - cell "0" [ref=e79]
+                  - row "3 South Africa 0 0 0" [ref=e80]:
+                    - cell "3" [ref=e81]
+                    - cell "South Africa" [ref=e82]:
+                      - generic [ref=e84]: South Africa
+                    - cell "0" [ref=e85]
+                    - cell "0" [ref=e86]
+                    - cell "0" [ref=e87]
+                  - row "4 South Korea 0 0 0" [ref=e88]:
+                    - cell "4" [ref=e89]
+                    - cell "South Korea" [ref=e90]:
+                      - generic [ref=e92]: South Korea
+                    - cell "0" [ref=e93]
+                    - cell "0" [ref=e94]
+                    - cell "0" [ref=e95]
+            - generic [ref=e96]:
+              - heading "Group Group B" [level=3] [ref=e98]
+              - table [ref=e99]:
+                - rowgroup [ref=e100]:
+                  - row "P GD Pts" [ref=e101]:
+                    - columnheader [ref=e102]
+                    - columnheader "P" [ref=e103]
+                    - columnheader "GD" [ref=e104]
+                    - columnheader "Pts" [ref=e105]
+                - rowgroup [ref=e106]:
+                  - row "1 Bosnia & Herzegovina 0 0 0" [ref=e107]:
+                    - cell "1" [ref=e108]
+                    - cell "Bosnia & Herzegovina" [ref=e109]:
+                      - generic [ref=e111]: Bosnia & Herzegovina
+                    - cell "0" [ref=e112]
+                    - cell "0" [ref=e113]
+                    - cell "0" [ref=e114]
+                  - row "2 Canada 0 0 0" [ref=e115]:
+                    - cell "2" [ref=e116]
+                    - cell "Canada" [ref=e117]:
+                      - generic [ref=e119]: Canada
+                    - cell "0" [ref=e120]
+                    - cell "0" [ref=e121]
+                    - cell "0" [ref=e122]
+                  - row "3 Qatar 0 0 0" [ref=e123]:
+                    - cell "3" [ref=e124]
+                    - cell "Qatar" [ref=e125]:
+                      - generic [ref=e127]: Qatar
+                    - cell "0" [ref=e128]
+                    - cell "0" [ref=e129]
+                    - cell "0" [ref=e130]
+                  - row "4 Switzerland 0 0 0" [ref=e131]:
+                    - cell "4" [ref=e132]
+                    - cell "Switzerland" [ref=e133]:
+                      - generic [ref=e135]: Switzerland
+                    - cell "0" [ref=e136]
+                    - cell "0" [ref=e137]
+                    - cell "0" [ref=e138]
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - heading "Top scorers" [level=2] [ref=e141]
+            - link "View all →" [ref=e142] [cursor=pointer]:
+              - /url: /en/stats
+              - text: View all
+              - generic [ref=e143]: →
+          - paragraph [ref=e144]: No goals scored yet
+  - contentinfo [ref=e145]: World Cup 26 · football-data.org
+  - button "Open Next.js Dev Tools" [ref=e151] [cursor=pointer]:
+    - img [ref=e152]
