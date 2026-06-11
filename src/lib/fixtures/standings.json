@@ -1,0 +1,115 @@
+{
+  "competition": { "id": 2000, "name": "FIFA World Cup", "code": "WC" },
+  "standings": [
+    {
+      "stage": "GROUP_STAGE",
+      "type": "TOTAL",
+      "group": "GROUP_A",
+      "table": [
+        {
+          "position": 1,
+          "team": { "id": 770, "name": "Mexico", "tla": "MEX", "crest": "https://crests.football-data.org/770.png" },
+          "playedGames": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1
+        },
+        {
+          "position": 2,
+          "team": { "id": 8029, "name": "South Korea", "tla": "KOR", "crest": "https://crests.football-data.org/8029.png" },
+          "playedGames": 0,
+          "won": 0,
+          "draw": 0,
+          "lost": 0,
+          "points": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0
+        },
+        {
+          "position": 3,
+          "team": { "id": 805, "name": "Egypt", "tla": "EGY", "crest": "https://crests.football-data.org/805.png" },
+          "playedGames": 0,
+          "won": 0,
+          "draw": 0,
+          "lost": 0,
+          "points": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0
+        },
+        {
+          "position": 4,
+          "team": { "id": 1031, "name": "South Africa", "tla": "RSA", "crest": "https://crests.football-data.org/1031.png" },
+          "playedGames": 1,
+          "won": 0,
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "goalDifference": -1
+        }
+      ]
+    },
+    {
+      "stage": "GROUP_STAGE",
+      "type": "TOTAL",
+      "group": "GROUP_B",
+      "table": [
+        {
+          "position": 1,
+          "team": { "id": 784, "name": "Italy", "tla": "ITA", "crest": "https://crests.football-data.org/784.png" },
+          "playedGames": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1
+        },
+        {
+          "position": 2,
+          "team": { "id": 773, "name": "France", "tla": "FRA", "crest": "https://crests.football-data.org/773.png" },
+          "playedGames": 0,
+          "won": 0,
+          "draw": 0,
+          "lost": 0,
+          "points": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0
+        },
+        {
+          "position": 3,
+          "team": { "id": 8601, "name": "Saudi Arabia", "tla": "KSA", "crest": "https://crests.football-data.org/8601.png" },
+          "playedGames": 0,
+          "won": 0,
+          "draw": 0,
+          "lost": 0,
+          "points": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0
+        },
+        {
+          "position": 4,
+          "team": { "id": 8030, "name": "Canada", "tla": "CAN", "crest": "https://crests.football-data.org/8030.png" },
+          "playedGames": 1,
+          "won": 0,
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "goalDifference": -1
+        }
+      ]
+    }
+  ]
+}
