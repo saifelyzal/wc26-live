@@ -93,6 +93,7 @@ const KNOCKOUT_ORDER = [
 ];
 
 const AUTO_FINISH_AFTER_MS = 165 * 60_000;
+const LIVE_OVERLAY_KICKOFF_TOLERANCE_MS = 2 * 60 * 60_000;
 
 function toTeam(team: ApiJson): TeamVM {
   return {
@@ -279,11 +280,7 @@ export function mergeLiveOverlay(
   if (overlays.length === 0) return matches;
   return matches.map((match) => {
     if (match.status === "FINISHED") return match;
-    const overlay = overlays.find(
-      (o) =>
-        Date.parse(o.kickoff) === Date.parse(match.kickoff) &&
-        (o.home === match.home.code || o.away === match.away.code),
-    );
+    const overlay = bestLiveOverlay(match, overlays);
     if (!overlay || overlay.state === "pre") return match;
     return {
       ...match,
@@ -292,6 +289,34 @@ export function mergeLiveOverlay(
       score: overlay.score ?? match.score,
     };
   });
+}
+
+function bestLiveOverlay(
+  match: MatchVM,
+  overlays: LiveOverlay[],
+): LiveOverlay | undefined {
+  const kickoff = Date.parse(match.kickoff);
+  let best: { overlay: LiveOverlay; score: number } | null = null;
+
+  for (const overlay of overlays) {
+    const overlayKickoff = Date.parse(overlay.kickoff);
+    if (!Number.isFinite(kickoff) || !Number.isFinite(overlayKickoff)) continue;
+    if (
+      Math.abs(overlayKickoff - kickoff) > LIVE_OVERLAY_KICKOFF_TOLERANCE_MS
+    ) {
+      continue;
+    }
+
+    let score = 0;
+    if (overlay.home === match.home.code) score += 2;
+    if (overlay.away === match.away.code) score += 2;
+    if (overlay.home === match.away.code) score += 1;
+    if (overlay.away === match.home.code) score += 1;
+    if (score === 0) continue;
+    if (!best || score > best.score) best = { overlay, score };
+  }
+
+  return best?.overlay;
 }
 
 export function settleExpiredMatches(matches: MatchVM[], now: number): MatchVM[] {

@@ -153,12 +153,7 @@ export class LiveServer {
     this.current = next;
     if (prev) {
       const changes = diffMatches(prev.matches, next.matches);
-      const changed =
-        changes.length > 0 ||
-        JSON.stringify(prev.matches) !== JSON.stringify(next.matches);
-      if (changed) {
-        this.hub.broadcast({ type: "matches", ...next, changes });
-      }
+      this.hub.broadcast({ type: "matches", ...next, changes });
     }
     return next;
   }

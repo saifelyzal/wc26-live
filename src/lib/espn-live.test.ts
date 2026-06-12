@@ -81,4 +81,18 @@ describe("mergeLiveOverlay", () => {
     ]);
     expect(merged.find((x) => x.id === 500006)!.status).toBe("LIVE");
   });
+
+  test("matches live overlays when providers disagree slightly on kickoff", () => {
+    const merged = mergeLiveOverlay(matches, [
+      overlayFor(base, {
+        kickoff: new Date(Date.parse(base.kickoff) + 15 * 60_000).toISOString(),
+        minute: 18,
+        score: { home: 0, away: 1 },
+      }),
+    ]);
+    const m = merged.find((x) => x.id === 500006)!;
+    expect(m.status).toBe("LIVE");
+    expect(m.minute).toBe(18);
+    expect(m.score).toEqual({ home: 0, away: 1 });
+  });
 });
