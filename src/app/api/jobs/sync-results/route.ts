@@ -1,22 +1,11 @@
 import { getLiveServer } from "@/lib/live-server";
+import { authorizedJobRequest } from "@/lib/job-auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-function authorized(request: Request): boolean {
-  const expected = process.env.RESULT_SYNC_SECRET;
-  if (!expected) return process.env.NODE_ENV !== "production";
-
-  const auth = request.headers.get("authorization");
-  const bearer = auth?.startsWith("Bearer ") ? auth.slice(7) : null;
-  const header = request.headers.get("x-sync-secret");
-  const urlSecret = new URL(request.url).searchParams.get("secret");
-
-  return bearer === expected || header === expected || urlSecret === expected;
-}
-
 async function run(request: Request) {
-  if (!authorized(request)) {
+  if (!authorizedJobRequest(request)) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -34,6 +23,8 @@ async function run(request: Request) {
     scored,
     storedResults: state.storedResults,
     changedResults: state.changedResults,
+    recapCandidates: state.recaps.candidates,
+    recapsGenerated: state.recaps.generated,
   });
 }
 

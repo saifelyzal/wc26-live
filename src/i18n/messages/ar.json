@@ -54,7 +54,20 @@
     "halfTime": "الشوط الأول",
     "halfTimeScore": "الشوط الأول {score}",
     "notStarted": "لم تبدأ هذه المباراة بعد",
-    "stage": "المرحلة"
+    "stage": "المرحلة",
+    "recap": "الملخص"
+  },
+  "recap": {
+    "title": "أبرز اللقطات وملخص المباراة",
+    "subtitle": "ملخص، لحظات مهمة، ولقطات رسمية عند توفرها",
+    "officialHighlights": "أبرز اللقطات الرسمية",
+    "watchOfficialHighlights": "مشاهدة اللقطات الرسمية",
+    "highlightsComingSoon": "ستتوفر اللقطات الرسمية قريبًا.",
+    "summary": "ملخص المباراة",
+    "recapComingSoon": "سيتم نشر ملخص المباراة قريبًا.",
+    "keyMoments": "اللحظات المهمة",
+    "momentsComingSoon": "ستتوفر اللحظات المهمة قريبًا.",
+    "fullTime": "انتهت"
   },
   "groups": {
     "title": "ترتيب المجموعات",

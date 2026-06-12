@@ -54,7 +54,20 @@
     "halfTime": "Half-time",
     "halfTimeScore": "Half-time {score}",
     "notStarted": "This match has not started yet",
-    "stage": "Stage"
+    "stage": "Stage",
+    "recap": "Recap"
+  },
+  "recap": {
+    "title": "Match Highlights & Recap",
+    "subtitle": "Summary, key moments, and official highlights when available",
+    "officialHighlights": "Official Match Highlights",
+    "watchOfficialHighlights": "Watch official highlights",
+    "highlightsComingSoon": "Official highlights coming soon.",
+    "summary": "Match Summary",
+    "recapComingSoon": "Match recap coming soon.",
+    "keyMoments": "Key Moments",
+    "momentsComingSoon": "Key moments coming soon.",
+    "fullTime": "FT"
   },
   "groups": {
     "title": "Group standings",

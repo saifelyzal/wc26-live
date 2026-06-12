@@ -6,9 +6,15 @@ import {
   writeFileSync,
 } from "node:fs";
 import { dirname, join } from "node:path";
+import type { RowDataPacket } from "mysql2";
+import {
+  ensureDatabaseInitialized,
+  getMySqlPool,
+  hasMySqlConfig,
+} from "./mysql";
 import type { MatchEventVM, MatchStatsVM, MatchStatus, MatchVM } from "./transformers";
 
-type StoredResult = {
+export type StoredResult = {
   id: number;
   kickoff: string;
   status: Extract<MatchStatus, "LIVE" | "FINISHED">;
@@ -30,7 +36,7 @@ export type RememberSummary = {
 
 const DEFAULT_PATH = join(process.cwd(), ".data", "match-results.json");
 
-function hasStats(stats: MatchStatsVM): boolean {
+export function hasStats(stats: MatchStatsVM): boolean {
   return (
     stats.halfTime != null ||
     stats.home.goals > 0 ||
@@ -77,8 +83,8 @@ function sameStoredResult(a: StoredResult, b: StoredResult): boolean {
 }
 
 export type MatchResultStore = {
-  hydrate(matches: MatchVM[]): MatchVM[];
-  remember(matches: MatchVM[]): RememberSummary;
+  hydrate(matches: MatchVM[]): Promise<MatchVM[]> | MatchVM[];
+  remember(matches: MatchVM[]): Promise<RememberSummary> | RememberSummary;
 };
 
 export class FileResultStore implements MatchResultStore {
@@ -153,6 +159,137 @@ export class FileResultStore implements MatchResultStore {
   }
 }
 
+type ResultRow = RowDataPacket & {
+  fixture_id: string;
+  kickoff: Date | string | null;
+  status: "LIVE" | "FINISHED";
+  score: string | MatchVM["score"] | null;
+  events: string | MatchEventVM[] | null;
+  stats: string | MatchStatsVM | null;
+  updated_at: Date | string;
+};
+
+function parseJson<T>(value: string | T | null): T | null {
+  if (value == null) return null;
+  if (typeof value === "string") return JSON.parse(value) as T;
+  return value;
+}
+
+function rowToStored(row: ResultRow): StoredResult {
+  return {
+    id: Number(row.fixture_id),
+    kickoff:
+      row.kickoff instanceof Date
+        ? row.kickoff.toISOString()
+        : (row.kickoff ?? ""),
+    status: row.status,
+    score: parseJson<MatchVM["score"]>(row.score),
+    events: parseJson<MatchEventVM[]>(row.events) ?? [],
+    stats: parseJson<MatchStatsVM>(row.stats) ?? {
+      halfTime: null,
+      home: {
+        goals: 0,
+        penalties: 0,
+        ownGoals: 0,
+        yellowCards: 0,
+        redCards: 0,
+        totalCards: 0,
+      },
+      away: {
+        goals: 0,
+        penalties: 0,
+        ownGoals: 0,
+        yellowCards: 0,
+        redCards: 0,
+        totalCards: 0,
+      },
+    },
+    updatedAt:
+      row.updated_at instanceof Date
+        ? row.updated_at.getTime()
+        : Date.parse(row.updated_at),
+  };
+}
+
+export class MySqlResultStore implements MatchResultStore {
+  async hydrate(matches: MatchVM[]): Promise<MatchVM[]> {
+    if (matches.length === 0) return matches;
+    await ensureDatabaseInitialized();
+    const ids = matches.map((match) => String(match.id));
+    const [rows] = await getMySqlPool().query<ResultRow[]>(
+      `SELECT fixture_id, kickoff, status, score, events, stats, updated_at
+       FROM match_results
+       WHERE fixture_id IN (?)`,
+      [ids],
+    );
+    const stored = new Map(rows.map((row) => [Number(row.fixture_id), rowToStored(row)]));
+
+    return matches.map((match) => {
+      const result = stored.get(match.id);
+      if (!result) return match;
+
+      const useStoredStats = !hasStats(match.stats) && hasStats(result.stats);
+      const storedFinished =
+        result.status === "FINISHED" && match.status !== "LIVE";
+
+      return {
+        ...match,
+        status: storedFinished ? "FINISHED" : match.status,
+        minute: storedFinished ? null : match.minute,
+        score: match.score ?? result.score,
+        events: match.events.length > 0 ? match.events : result.events,
+        stats: useStoredStats ? result.stats : match.stats,
+      };
+    });
+  }
+
+  async remember(matches: MatchVM[]): Promise<RememberSummary> {
+    const candidates = matches.filter(shouldStore);
+    if (candidates.length === 0) return { stored: 0, changed: 0 };
+
+    await ensureDatabaseInitialized();
+    const pool = getMySqlPool();
+    let changed = 0;
+
+    for (const match of candidates) {
+      const [rows] = await pool.query<ResultRow[]>(
+        `SELECT fixture_id, kickoff, status, score, events, stats, updated_at
+         FROM match_results
+         WHERE fixture_id = ?
+         LIMIT 1`,
+        [String(match.id)],
+      );
+      const existing = rows[0] ? rowToStored(rows[0]) : undefined;
+      const next = mergeStored(match, existing);
+      if (existing && sameStoredResult(existing, next)) continue;
+
+      await pool.execute(
+        `INSERT INTO match_results
+          (fixture_id, kickoff, status, score, events, stats)
+         VALUES (?, ?, ?, ?, ?, ?)
+         ON DUPLICATE KEY UPDATE
+          kickoff = VALUES(kickoff),
+          status = VALUES(status),
+          score = VALUES(score),
+          events = VALUES(events),
+          stats = VALUES(stats)`,
+        [
+          String(next.id),
+          next.kickoff ? new Date(next.kickoff) : null,
+          next.status,
+          JSON.stringify(next.score),
+          JSON.stringify(next.events),
+          JSON.stringify(next.stats),
+        ],
+      );
+      changed += 1;
+    }
+
+    return { stored: candidates.length, changed };
+  }
+}
+
 export function createResultStore(path?: string) {
+  if (!path && hasMySqlConfig()) return new MySqlResultStore();
   return new FileResultStore(path);
 }

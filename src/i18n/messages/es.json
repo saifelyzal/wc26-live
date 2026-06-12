@@ -54,7 +54,20 @@
     "halfTime": "Descanso",
     "halfTimeScore": "Descanso {score}",
     "notStarted": "Este partido aún no ha comenzado",
-    "stage": "Fase"
+    "stage": "Fase",
+    "recap": "Resumen"
+  },
+  "recap": {
+    "title": "Highlights y resumen",
+    "subtitle": "Resumen, momentos clave y highlights oficiales cuando estén disponibles",
+    "officialHighlights": "Highlights oficiales del partido",
+    "watchOfficialHighlights": "Ver highlights oficiales",
+    "highlightsComingSoon": "Los highlights oficiales estarán disponibles pronto.",
+    "summary": "Resumen del partido",
+    "recapComingSoon": "El resumen del partido estará disponible pronto.",
+    "keyMoments": "Momentos clave",
+    "momentsComingSoon": "Los momentos clave estarán disponibles pronto.",
+    "fullTime": "FIN"
   },
   "groups": {
     "title": "Tablas de grupos",

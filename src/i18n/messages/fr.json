@@ -54,7 +54,20 @@
     "halfTime": "Mi-temps",
     "halfTimeScore": "Mi-temps {score}",
     "notStarted": "Ce match n'a pas encore commencé",
-    "stage": "Phase"
+    "stage": "Phase",
+    "recap": "Récap"
+  },
+  "recap": {
+    "title": "Temps forts et récap",
+    "subtitle": "Résumé, moments clés et temps forts officiels selon disponibilité",
+    "officialHighlights": "Temps forts officiels du match",
+    "watchOfficialHighlights": "Voir les temps forts officiels",
+    "highlightsComingSoon": "Les temps forts officiels arrivent bientôt.",
+    "summary": "Résumé du match",
+    "recapComingSoon": "Le récap du match arrive bientôt.",
+    "keyMoments": "Moments clés",
+    "momentsComingSoon": "Les moments clés arrivent bientôt.",
+    "fullTime": "TER"
   },
   "groups": {
     "title": "Classements des groupes",

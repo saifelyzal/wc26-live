@@ -7,6 +7,7 @@ import {
   fetchNativeStatsResults,
   mergeNativeStatsResults,
 } from "./native-stats";
+import { syncMatchRecaps, type RecapSyncSummary } from "./recap-worker";
 import { createResultStore, type RememberSummary } from "./result-store";
 import {
   diffMatches,
@@ -24,6 +25,7 @@ export type MatchesState = {
 export type SyncResultsState = MatchesState & {
   storedResults: number;
   changedResults: number;
+  recaps: RecapSyncSummary;
 };
 
 const MOCK_TICK_MS = 5_000;
@@ -73,6 +75,7 @@ export class LiveServer {
       ...state,
       storedResults: this.lastRemember.stored,
       changedResults: this.lastRemember.changed,
+      recaps: await syncMatchRecaps(state.matches),
     };
   }
 
@@ -116,8 +119,8 @@ export class LiveServer {
       const matches = prev
         ? simulateTick(prev.matches, this.tick)
         : this.baseMatches;
-      const hydrated = this.resultStore.hydrate(matches);
-      this.lastRemember = this.resultStore.remember(hydrated);
+      const hydrated = await this.resultStore.hydrate(matches);
+      this.lastRemember = await this.resultStore.remember(hydrated);
       next = { matches: hydrated, updatedAt: Date.now(), stale: false };
     } else {
       const [result, overlays] = await Promise.all([
@@ -142,8 +145,8 @@ export class LiveServer {
             }),
           )
         : settled;
-      const matches = this.resultStore.hydrate(backfilled);
-      this.lastRemember = this.resultStore.remember(matches);
+      const matches = await this.resultStore.hydrate(backfilled);
+      this.lastRemember = await this.resultStore.remember(matches);
       next = { matches, updatedAt: Date.now(), stale: result.stale };
     }
 

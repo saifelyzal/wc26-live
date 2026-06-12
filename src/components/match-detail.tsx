@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormatter, useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { teamName } from "@/lib/team-name";
 import { useDisplayTimeZone } from "@/lib/use-display-timezone";
 import { useLiveMatches, type LiveMatchesState } from "@/lib/use-live-matches";
@@ -142,7 +143,17 @@ export function MatchDetail({
           {match.group && <> · {tc("group", { name: match.group })}</>}
           {match.matchday && <> · {tc("matchday", { n: match.matchday })}</>}
         </p>
-        <UpdatedStamp updatedAt={state.updatedAt} stale={state.stale} />
+        <div className="flex items-center gap-3">
+          {match.status === "FINISHED" && (
+            <Link
+              href={`/matches/${match.id}/recap`}
+              className="rounded-full bg-sol-400 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-pitch-950 shadow-md shadow-sol-500/30"
+            >
+              {t("recap")}
+            </Link>
+          )}
+          <UpdatedStamp updatedAt={state.updatedAt} stale={state.stale} />
+        </div>
       </div>
 
       {/* Scoreboard hero */}

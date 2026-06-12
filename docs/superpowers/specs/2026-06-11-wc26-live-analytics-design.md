@@ -18,7 +18,7 @@ A live analytics/stats website for the FIFA World Cup 2026 with real-time score 
 | Home layout | "Scoreboard-first": live match cards on top, standings/leaderboard previews below |
 | Visual direction | "Tournament festival": vibrant green/blue host-nation gradients, white score cards |
 | Deployment | NexusAI, API key as secret |
-| Result persistence | Server-side result store; default adapter writes `.data/match-results.json` on persistent NexusAI storage |
+| Result persistence | MySQL in production; file fallback writes `.data/*.json` for local development |
 
 ## Architecture
 
@@ -27,8 +27,9 @@ One Next.js app with three roles:
 1. **UI** — locale-prefixed pages (`/[locale]/...`) via `next-intl`.
 2. **API proxy + cache** — server-only fetcher for football-data.org v4; the key never reaches the browser. In-memory TTL cache + rate budgeter staying under 10 req/min. Adaptive poll loop: ~30s while matches are live, several minutes otherwise.
 3. **Live fan-out** — SSE endpoint `/api/live` broadcasts diffs from the single poll loop to all connected clients (N viewers cost the same API budget as one). Client falls back to 60s polling if SSE drops.
-4. **Result persistence** — completed/live match results are remembered server-side and merged back into feed responses when football-data.org returns delayed or incomplete final scores. The current adapter is file-backed for NexusAI writable storage and can be replaced by a managed NexusAI datastore without changing UI components.
-5. **Scheduled sync job** — NexusAI should call `GET /api/jobs/sync-results` or `POST /api/jobs/sync-results` on a schedule. Set `RESULT_SYNC_SECRET` and send it as `Authorization: Bearer <secret>` or `x-sync-secret: <secret>`. This job refreshes the football feed and writes known match results/stats into the result store even when no users are browsing.
+4. **Result persistence** — completed/live match results and generated recaps are remembered server-side in MySQL and merged back into feed responses when football-data.org returns delayed or incomplete final scores. Local development falls back to `.data/*.json` when MySQL env vars are absent.
+5. **Database initialization** — `src/instrumentation.ts` initializes MySQL during each Next.js server instance startup when MySQL env vars are configured. `POST /api/jobs/init-db` remains available as a protected manual repair/verification route. The equivalent SQL is in `docs/db/mysql-init.sql`.
+6. **Scheduled sync job** — NexusAI should call `GET /api/jobs/sync-results` or `POST /api/jobs/sync-results` on a schedule. Set `RESULT_SYNC_SECRET` and send it as `Authorization: Bearer <secret>` or `x-sync-secret: <secret>`. This job refreshes the football feed and writes known match results/stats/recaps into MySQL even when no users are browsing.
 
 Historical World Cups (1930–2022) ship as a static JSON dataset bundled in the repo — zero API calls.
 
