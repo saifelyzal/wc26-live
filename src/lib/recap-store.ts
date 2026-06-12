@@ -80,6 +80,14 @@ export class FileMatchRecapStore implements MatchRecapStore {
     const recaps = this.read();
     const key = recapKey(input.fixture_id, language);
     const existing = recaps.get(key);
+    const youtubeVideoId =
+      "youtube_video_id" in input
+        ? (input.youtube_video_id ?? null)
+        : (existing?.youtube_video_id ?? null);
+    const officialHighlightUrl =
+      "official_highlight_url" in input
+        ? (input.official_highlight_url ?? null)
+        : (existing?.official_highlight_url ?? null);
     const next: MatchRecap = {
       id: existing?.id ?? createId(),
       fixture_id: input.fixture_id,
@@ -87,9 +95,8 @@ export class FileMatchRecapStore implements MatchRecapStore {
       summary: input.summary ?? existing?.summary ?? null,
       key_moments: input.key_moments ?? existing?.key_moments ?? [],
       stats: input.stats ?? existing?.stats ?? null,
-      youtube_video_id: input.youtube_video_id ?? existing?.youtube_video_id ?? null,
-      official_highlight_url:
-        input.official_highlight_url ?? existing?.official_highlight_url ?? null,
+      youtube_video_id: youtubeVideoId,
+      official_highlight_url: officialHighlightUrl,
       status: input.status ?? existing?.status ?? "pending",
       created_at: existing?.created_at ?? now,
       updated_at: now,
@@ -190,6 +197,14 @@ export class MySqlMatchRecapStore implements MatchRecapStore {
     const language = input.language ?? "en";
     const existing = await this.find(input.fixture_id, language);
     const now = new Date().toISOString();
+    const youtubeVideoId =
+      "youtube_video_id" in input
+        ? (input.youtube_video_id ?? null)
+        : (existing?.youtube_video_id ?? null);
+    const officialHighlightUrl =
+      "official_highlight_url" in input
+        ? (input.official_highlight_url ?? null)
+        : (existing?.official_highlight_url ?? null);
     const next: MatchRecap = {
       id: existing?.id ?? createId(),
       fixture_id: input.fixture_id,
@@ -197,9 +212,8 @@ export class MySqlMatchRecapStore implements MatchRecapStore {
       summary: input.summary ?? existing?.summary ?? null,
       key_moments: input.key_moments ?? existing?.key_moments ?? [],
       stats: input.stats ?? existing?.stats ?? null,
-      youtube_video_id: input.youtube_video_id ?? existing?.youtube_video_id ?? null,
-      official_highlight_url:
-        input.official_highlight_url ?? existing?.official_highlight_url ?? null,
+      youtube_video_id: youtubeVideoId,
+      official_highlight_url: officialHighlightUrl,
       status: input.status ?? existing?.status ?? "pending",
       created_at: existing?.created_at ?? now,
       updated_at: now,

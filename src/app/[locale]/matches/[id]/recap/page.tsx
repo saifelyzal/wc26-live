@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { MatchRecap } from "@/components/match-recap";
 import { getLiveServer } from "@/lib/live-server";
 import { createMatchRecapStore } from "@/lib/recap-store";
+import { getOrGenerateMatchRecap } from "@/lib/recap-worker";
 
 export const dynamic = "force-dynamic";
 
@@ -16,10 +17,14 @@ export default async function MatchRecapPage({
   server.start();
   const matches = await server.getMatches();
 
-  if (!matches.matches.some((m) => m.id === matchId)) notFound();
+  const match = matches.matches.find((m) => m.id === matchId);
+  if (!match) notFound();
 
   const store = createMatchRecapStore();
-  const recap = (await store.find(id, locale)) ?? (await store.find(id, "en"));
+  const recap =
+    (await getOrGenerateMatchRecap(match, { language: locale, store })) ??
+    (await store.find(id, locale)) ??
+    (await store.find(id, "en"));
 
   return <MatchRecap recap={recap} />;
 }

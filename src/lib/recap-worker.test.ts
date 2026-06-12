@@ -80,4 +80,21 @@ describe("recap worker", () => {
       generated: 0,
     });
   });
+
+  test("sync repairs ready recaps that still have embedded YouTube IDs", async () => {
+    const store = tempStore();
+
+    await store.upsert({
+      fixture_id: String(finished.id),
+      summary: "Old recap with a blocked embed.",
+      youtube_video_id: "ohaVwXIp6TA",
+      status: "ready",
+    });
+
+    expect(await syncMatchRecaps([finished], { store })).toEqual({
+      candidates: 1,
+      generated: 1,
+    });
+    expect((await store.find(String(finished.id)))?.youtube_video_id).toBeNull();
+  });
 });
